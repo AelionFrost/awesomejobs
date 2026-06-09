@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "generated_at": "2026-06-09T12:00:00Z",
+    "source": "awesomejobs.online",
+    "pipeline": "n8n → Ollama (gemma2/qwen2.5/llama3) → qwen2.5-coder:7b"
+  },
+  "jobs": [
+    {
+      "title": "Senior Frontend Engineer",
+      "company": "Acme Corp",
+      "location": "Remote (US)",
+      "salary": "$120k – $180k",
+      "tags": ["React", "TypeScript", "Next.js", "CSS"],
+      "apply_url": "https://example.com/apply/acme-fe",
+      "date_posted": "2026-06-09T08:00:00Z"
+    },
+    {
+      "title": "DevOps / SRE Lead",
+      "company": "CloudFleet",
+      "location": "Remote (Global)",
+      "salary": "$150k – $200k",
+      "tags": ["AWS", "Kubernetes", "Terraform", "Go"],
+      "apply_url": "https://example.com/apply/cloudfleet-sre",
+      "date_posted": "2026-06-08T14:30:00Z"
+    },
+    {
+      "title": "Data Engineer",
+      "company": "Datum Analytics",
+      "location": "Remote (EU)",
+      "salary": "$100k – $140k",
+      "tags": ["Python", "SQL", "dbt", "Airflow"],
+      "apply_url": "https://example.com/apply/datum-de",
+      "date_posted": "2026-06-08T09:15:00Z"
+    },
+    {
+      "title": "Solidity Smart Contract Engineer",
+      "company": "ZeroChain",
+      "location": "Remote (Global)",
+      "salary": "$160k – $220k",
+      "tags": ["Solidity", "Web3", "Rust", "DeFi"],
+      "apply_url": "https://example.com/apply/zerochain-sc",
+      "date_posted": "2026-06-07T18:00:00Z"
+    },
+    {
+      "title": "Product Manager – Platform",
+      "company": "Nimbus",
+      "location": "Remote (US / EU)",
+      "salary": "$130k – $170k",
+      "tags": ["Product", "SaaS", "B2B", "API"],
+      "apply_url": "https://example.com/apply/nimbus-pm",
+      "date_posted": "2026-06-07T11:45:00Z"
+    },
+    {
+      "title": "Backend Engineer (Node.js)",
+      "company": "RelayPay",
+      "location": "Remote (Americas)",
+      "salary": "$110k – $160k",
+      "tags": ["Node.js", "PostgreSQL", "GraphQL", "Docker"],
+      "apply_url": "https://example.com/apply/relaypay-be",
+      "date_posted": "2026-06-06T20:30:00Z"
+    },
+    {
+      "title": "Senior UX/UI Designer",
+      "company": "Pixelfoundry",
+      "location": "Remote (Global)",
+      "salary": "$90k – $130k",
+      "tags": ["Figma", "Design Systems", "UX Research", "CSS"],
+      "apply_url": "https://example.com/apply/pixelfoundry-ux",
+      "date_posted": "2026-06-06T15:00:00Z"
+    },
+    {
+      "title": "Full-Stack Engineer",
+      "company": "Patchwork AI",
+      "location": "Remote (Worldwide)",
+      "salary": "$140k – $190k",
+      "tags": ["React", "Python", "LLMs", "FastAPI"],
+      "apply_url": "https://example.com/apply/patchwork-fs",
+      "date_posted": "2026-06-05T10:00:00Z"
+    }
+  ]
+}
