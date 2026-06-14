@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Job proxy v5 — instant text extraction, no LLM delay."""
+"""Job proxy — extracts text, cuts before forms/salary disclosures."""
 import json, urllib.request, re, urllib.parse
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from html.parser import HTMLParser
@@ -9,15 +9,14 @@ PORT = 8910
 class T(HTMLParser):
     def __init__(self):
         super().__init__()
-        self.t = []; self.s = 0
+        self.t = []; self.stop = False
     def handle_starttag(self, tag, a):
-        if tag in ('script','style','noscript','svg','nav','footer','header'): self.s += 1
-        elif tag in ('br','p','div','li','h1','h2','h3','h4','h5','h6','tr','section','article'): self.t.append('\n')
-    def handle_endtag(self, tag):
-        if tag in ('script','style','noscript','svg','nav','footer','header'): self.s = max(0,self.s-1)
-        elif tag in ('p','div','li','h1','h2','h3','h4','h5'): self.t.append('\n')
+        if tag in ('br','p','div','li','h1','h2','h3','h4','h5','h6','tr','section','article'): self.t.append('\n')
     def handle_data(self, d):
-        if self.s==0 and d.strip(): self.t.append(d.strip()+' ')
+        if not d.strip() or self.stop: return
+        if re.match(r'^(Apply for this job|First Name|Last Name|Preferred First|Email \*|Phone|Resume/CV|Cover Letter|Submit application)', d.strip()):
+            self.stop = True; return
+        self.t.append(d.strip()+' ')
 
 def fetch(url):
     try:
@@ -31,8 +30,25 @@ def extract(html):
     e = T(); e.feed(html)
     t = re.sub(r' {2,}',' ',''.join(e.t))
     t = re.sub(r'\n{3,}','\n\n',t)
-    lines = [l.strip() for l in t.split('\n') if len(l.strip())>5]
-    deduped = [l for i,l in enumerate(lines) if i==0 or l!=lines[i-1]]
+    lines = [l.strip() for l in t.split('\n') if l.strip() and len(l.strip())>5]
+    # Merge broken lines
+    merged = []; buf = ''
+    for l in lines:
+        ends = l.endswith(('.','?','!',':'))
+        if buf and not ends: buf += ' ' + l
+        elif buf: merged.append(buf); buf = l
+        else: buf = l
+    if buf: merged.append(buf)
+    # Cut at salary disclosure / EEO / form markers
+    result = []
+    for l in merged:
+        if re.match(r'^(Pay Transparency|This job posting|In addition to base salary|To provide greater transparency|In select roles|During the interview|Reddit is proud|Answering these|We invite you|What gender|Please select|The base salary range)', l): break
+        if re.search(r'(Apply for this job|First Name|Submit application)', l): break
+        result.append(l)
+    # Dedupe
+    deduped = []
+    for l in result:
+        if not deduped or l != deduped[-1]: deduped.append(l)
     return '\n'.join(deduped)
 
 class H(BaseHTTPRequestHandler):
@@ -43,7 +59,7 @@ class H(BaseHTTPRequestHandler):
             if not url: self.j({"error":"No URL"}); return
             html = fetch(url)
             if not html: self.j({"text":"Source unavailable"}); return
-            self.j({"text": extract(html), "url": url})
+            self.j({"text": extract(html)})
         else: self.j({"status":"ok"})
     def j(self, d):
         self.send_response(200)

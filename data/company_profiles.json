@@ -1,0 +1,1313 @@
+{
+  "Databricks": {
+    "logo": "/assets/company-logos/databricks.png",
+    "about": "Databricks is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Stripe": {
+    "about": "Stripe is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Anthropic": {
+    "logo": "/assets/company-logos/anthropic.png",
+    "about": "Anthropic is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Datadog": {
+    "logo": "/assets/company-logos/datadog.png",
+    "about": "Datadog is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "MongoDB": {
+    "logo": "/assets/company-logos/mongodb.png",
+    "about": "MongoDB is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Zscaler": {
+    "logo": "/assets/company-logos/zscaler.png",
+    "about": "Zscaler is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Wolt - English": {
+    "about": "Wolt - English is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Samsara": {
+    "logo": "/assets/company-logos/samsara.png",
+    "about": "Samsara is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Airbnb": {
+    "logo": "/assets/company-logos/airbnb.png",
+    "about": "Airbnb is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Okta": {
+    "logo": "/assets/company-logos/okta.png",
+    "about": "Okta is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Cloudflare": {
+    "logo": "/assets/company-logos/cloudflare.png",
+    "about": "Cloudflare is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Roku": {
+    "logo": "/assets/company-logos/roku.png",
+    "about": "Roku is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Proxify": {
+    "logo": "/assets/company-logos/proxify.png",
+    "about": "Proxify is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Figma": {
+    "logo": "/assets/company-logos/figma.png",
+    "about": "Figma is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Pulse Healthcare": {
+    "about": "Pulse Healthcare is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Pinterest": {
+    "about": "Pinterest is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "GitLab": {
+    "about": "GitLab is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Elastic": {
+    "about": "Elastic is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Robinhood": {
+    "about": "Robinhood is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Twilio": {
+    "logo": "/assets/company-logos/twilio.png",
+    "about": "Twilio is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Asana": {
+    "logo": "/assets/company-logos/asana.png",
+    "about": "Asana is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Instacart": {
+    "logo": "/assets/company-logos/instacart.png",
+    "about": "Instacart is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Reddit": {
+    "about": "Reddit is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Lyft": {
+    "logo": "/assets/company-logos/lyft.png",
+    "about": "Lyft is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "spotify": {
+    "about": "spotify is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Affirm": {
+    "logo": "/assets/company-logos/affirm.png",
+    "about": "Affirm is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Postman": {
+    "logo": "/assets/company-logos/postman.png",
+    "about": "Postman is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Workato": {
+    "logo": "/assets/company-logos/workato.png",
+    "about": "Workato is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Welocalize": {
+    "logo": "/assets/company-logos/welocalize.png",
+    "about": "Welocalize is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Nubank": {
+    "about": "Nubank is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "weloglobal": {
+    "logo": "/assets/company-logos/weloglobal.png",
+    "about": "weloglobal is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Lemon.io": {
+    "about": "Lemon.io is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Grafana Labs": {
+    "about": "Grafana Labs is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Fin": {
+    "logo": "/assets/company-logos/fin.png",
+    "about": "Fin is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Brex": {
+    "about": "Brex is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "JFrog": {
+    "logo": "/assets/company-logos/jfrog.png",
+    "about": "JFrog is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Block": {
+    "about": "Block is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Gusto, Inc.": {
+    "about": "Gusto, Inc. is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Freelancer.com": {
+    "about": "Freelancer.com is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Neuralink": {
+    "logo": "/assets/company-logos/neuralink.png",
+    "about": "Neuralink is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Tripadvisor": {
+    "about": "Tripadvisor is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "SolarWinds": {
+    "about": "SolarWinds is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "ZoomInfo Technologies LLC": {
+    "about": "ZoomInfo Technologies LLC is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Coinbase": {
+    "about": "Coinbase is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Chime Financial, Inc": {
+    "about": "Chime Financial, Inc is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Flexport": {
+    "logo": "/assets/company-logos/flexport.png",
+    "about": "Flexport is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Vercel": {
+    "logo": "/assets/company-logos/vercel.png",
+    "about": "Vercel is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Discord": {
+    "logo": "/assets/company-logos/discord.png",
+    "about": "Discord is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Monzo": {
+    "logo": "/assets/company-logos/monzo.png",
+    "about": "Monzo is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "StackAdapt": {
+    "logo": "/assets/company-logos/stackadapt.png",
+    "about": "StackAdapt is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Mercury": {
+    "logo": "/assets/company-logos/mercury.png",
+    "about": "Mercury is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Rubrik Job Board": {
+    "about": "Rubrik Job Board is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "New Relic": {
+    "logo": "/assets/company-logos/new-relic.png",
+    "about": "New Relic is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Checkr": {
+    "logo": "/assets/company-logos/checkr.png",
+    "about": "Checkr is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Nintendo": {
+    "about": "Nintendo is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "TELUS Digital": {
+    "about": "TELUS Digital is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Adyen": {
+    "logo": "/assets/company-logos/adyen.png",
+    "about": "Adyen is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Peroptyx": {
+    "about": "Peroptyx is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Ripple": {
+    "logo": "/assets/company-logos/ripple.png",
+    "about": "Ripple is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "LaunchDarkly": {
+    "logo": "/assets/company-logos/launchdarkly.png",
+    "about": "LaunchDarkly is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Duolingo": {
+    "logo": "/assets/company-logos/duolingo.png",
+    "about": "Duolingo is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "PagerDuty": {
+    "logo": "/assets/company-logos/pagerduty.png",
+    "about": "PagerDuty is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Backblaze External Website": {
+    "about": "Backblaze External Website is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Amplitude": {
+    "logo": "/assets/company-logos/amplitude.png",
+    "about": "Amplitude is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Pendo": {
+    "logo": "/assets/company-logos/pendo.png",
+    "about": "Pendo is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Storm Ideas": {
+    "logo": "/assets/company-logos/storm-ideas.png",
+    "about": "Storm Ideas is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Contentful": {
+    "logo": "/assets/company-logos/contentful.png",
+    "about": "Contentful is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Dropbox": {
+    "logo": "/assets/company-logos/dropbox.png",
+    "about": "Dropbox is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "DeepMind": {
+    "about": "DeepMind is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Jamf": {
+    "logo": "/assets/company-logos/jamf.png",
+    "about": "Jamf is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Proton": {
+    "about": "Proton is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Algolia": {
+    "logo": "/assets/company-logos/algolia.png",
+    "about": "Algolia is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Wrike": {
+    "logo": "/assets/company-logos/wrike.png",
+    "about": "Wrike is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Blockchain.com": {
+    "about": "Blockchain.com is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Qualtrics": {
+    "logo": "/assets/company-logos/qualtrics.png",
+    "about": "Qualtrics is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "GoDaddy": {
+    "about": "GoDaddy is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Cockroach Labs": {
+    "logo": "/assets/company-logos/cockroach-labs.png",
+    "about": "Cockroach Labs is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Mixpanel": {
+    "about": "Mixpanel is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "toptal": {
+    "about": "toptal is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "GoCardless": {
+    "logo": "/assets/company-logos/gocardless.png",
+    "about": "GoCardless is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Mozilla": {
+    "logo": "/assets/company-logos/mozilla.png",
+    "about": "Mozilla is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "N26": {
+    "logo": "/assets/company-logos/n26.png",
+    "about": "N26 is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Gemini": {
+    "about": "Gemini is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Webflow": {
+    "logo": "/assets/company-logos/webflow.png",
+    "about": "Webflow is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Tailscale": {
+    "logo": "/assets/company-logos/tailscale.png",
+    "about": "Tailscale is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Calendly": {
+    "logo": "/assets/company-logos/calendly.png",
+    "about": "Calendly is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Mindbody": {
+    "about": "Mindbody is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Typeform": {
+    "logo": "/assets/company-logos/typeform.png",
+    "about": "Typeform is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Veriff": {
+    "logo": "/assets/company-logos/veriff.png",
+    "about": "Veriff is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "RWS Group": {
+    "logo": "/assets/company-logos/rws-group.png",
+    "about": "RWS Group is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Mattermost": {
+    "about": "Mattermost is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Nextdoor": {
+    "logo": "/assets/company-logos/nextdoor.png",
+    "about": "Nextdoor is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Starburst": {
+    "about": "Starburst is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "neon": {
+    "about": "neon is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Everlaw": {
+    "logo": "/assets/company-logos/everlaw.png",
+    "about": "Everlaw is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Tines": {
+    "logo": "/assets/company-logos/tines.png",
+    "about": "Tines is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Udacity": {
+    "logo": "/assets/company-logos/udacity.png",
+    "about": "Udacity is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "CircleCI": {
+    "logo": "/assets/company-logos/circleci.png",
+    "about": "CircleCI is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Appen": {
+    "about": "Appen is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "EverAI": {
+    "logo": "/assets/company-logos/everai.png",
+    "about": "EverAI is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "PlanetScale": {
+    "logo": "/assets/company-logos/planetscale.png",
+    "about": "PlanetScale is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Fireblocks": {
+    "about": "Fireblocks is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Rws": {
+    "logo": "/assets/company-logos/rws.png",
+    "about": "Rws is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "SpotHero": {
+    "logo": "/assets/company-logos/spothero.png",
+    "about": "SpotHero is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Buildkite": {
+    "about": "Buildkite is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Toureasy d.o.o.": {
+    "about": "Toureasy d.o.o. is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Sneed|Mitchell LLP": {
+    "about": "Sneed|Mitchell LLP is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Sun Coast Sciences": {
+    "logo": "/assets/company-logos/sun-coast-sciences.png",
+    "about": "Sun Coast Sciences is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Bookmap LTD": {
+    "about": "Bookmap LTD is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Marker Video": {
+    "about": "Marker Video is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Integrated Hire": {
+    "logo": "/assets/company-logos/integrated-hire.png",
+    "about": "Integrated Hire is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Optimizee Group": {
+    "logo": "/assets/company-logos/optimizee-group.png",
+    "about": "Optimizee Group is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Highway One Marketing": {
+    "logo": "/assets/company-logos/highway-one-marketing.png",
+    "about": "Highway One Marketing is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "PharmaBoardroom": {
+    "logo": "/assets/company-logos/pharmaboardroom.png",
+    "about": "PharmaBoardroom is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Flag Theory": {
+    "logo": "/assets/company-logos/flag-theory.png",
+    "about": "Flag Theory is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Clipboard Health": {
+    "logo": "/assets/company-logos/clipboard-health.png",
+    "about": "Clipboard Health is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "SeatGeek": {
+    "about": "SeatGeek is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Brave": {
+    "logo": "/assets/company-logos/brave.png",
+    "about": "Brave is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Translated": {
+    "logo": "/assets/company-logos/translated.png",
+    "about": "Translated is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Doist": {
+    "logo": "/assets/company-logos/doist.png",
+    "about": "Doist is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Bolt.new": {
+    "about": "Bolt.new is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Lattice": {
+    "logo": "/assets/company-logos/lattice.png",
+    "about": "Lattice is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "WIZELINE": {
+    "logo": "/assets/company-logos/wizeline.png",
+    "about": "WIZELINE is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "LawnStarter": {
+    "logo": "/assets/company-logos/lawnstarter.png",
+    "about": "LawnStarter is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "trivago": {
+    "logo": "/assets/company-logos/trivago.png",
+    "about": "trivago is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "TransPerfect": {
+    "logo": "/assets/company-logos/transperfect.png",
+    "about": "TransPerfect is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "CuraSenseAI": {
+    "logo": "/assets/company-logos/curasenseai.png",
+    "about": "CuraSenseAI is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Fleetio": {
+    "about": "Fleetio is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Paystack": {
+    "about": "Paystack is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Plume": {
+    "logo": "/assets/company-logos/plume.png",
+    "about": "Plume is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Coursera": {
+    "logo": "/assets/company-logos/coursera.png",
+    "about": "Coursera is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Iris North America": {
+    "about": "Iris North America is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "logrocket": {
+    "logo": "/assets/company-logos/logrocket.png",
+    "about": "logrocket is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Sendbird": {
+    "logo": "/assets/company-logos/sendbird.png",
+    "about": "Sendbird is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Tomedes": {
+    "logo": "/assets/company-logos/tomedes.png",
+    "about": "Tomedes is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Acolad": {
+    "logo": "/assets/company-logos/acolad.png",
+    "about": "Acolad is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Udemy": {
+    "about": "Udemy is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Toggl": {
+    "logo": "/assets/company-logos/toggl.png",
+    "about": "Toggl is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "LanguageLine Solutions": {
+    "about": "LanguageLine Solutions is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Clever": {
+    "about": "Clever is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Languageline": {
+    "logo": "/assets/company-logos/languageline.png",
+    "about": "Languageline is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Smartling": {
+    "logo": "/assets/company-logos/smartling.png",
+    "about": "Smartling is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Propio Language Services": {
+    "about": "Propio Language Services is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Zuora": {
+    "logo": "/assets/company-logos/zuora.png",
+    "about": "Zuora is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Upwork": {
+    "about": "Upwork is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Keywords Studios": {
+    "about": "Keywords Studios is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Women Builders Council": {
+    "about": "Women Builders Council is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "STEM Sync AI": {
+    "about": "STEM Sync AI is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Crossbeam": {
+    "logo": "/assets/company-logos/crossbeam.png",
+    "about": "Crossbeam is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "<![CDATA[Ask HN": {
+    "about": "<![CDATA[Ask HN is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Turing": {
+    "about": "Turing is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Crisp": {
+    "about": "Crisp is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Transperfect": {
+    "logo": "/assets/company-logos/transperfect.png",
+    "about": "Transperfect is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Warp": {
+    "about": "Warp is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Blend": {
+    "logo": "/assets/company-logos/blend.png",
+    "about": "Blend is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "37signals": {
+    "logo": "/assets/company-logos/37signals.png",
+    "about": "37signals is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Scale AI": {
+    "about": "Scale AI is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "TheBigWord": {
+    "logo": "/assets/company-logos/thebigword.png",
+    "about": "TheBigWord is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Moda Health": {
+    "about": "Moda Health is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "The Home Depot Canada": {
+    "about": "The Home Depot Canada is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Cloetta": {
+    "logo": "/assets/company-logos/cloetta.png",
+    "about": "Cloetta is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Lokalise": {
+    "logo": "/assets/company-logos/lokalise.png",
+    "about": "Lokalise is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "FindTutors": {
+    "about": "FindTutors is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Universia Argentina": {
+    "about": "Universia Argentina is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Nymbus": {
+    "about": "Nymbus is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Form3 - External": {
+    "about": "Form3 - External is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "OpenZeppelin": {
+    "logo": "/assets/company-logos/openzeppelin.png",
+    "about": "OpenZeppelin is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Assured": {
+    "about": "Assured is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Current": {
+    "logo": "/assets/company-logos/current.png",
+    "about": "Current is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Contra": {
+    "logo": "/assets/company-logos/contra.png",
+    "about": "Contra is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Propio": {
+    "about": "Propio is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Scale Ai": {
+    "about": "Scale Ai is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "DataAnnotation": {
+    "about": "DataAnnotation is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "<![CDATA[Tell HN": {
+    "about": "<![CDATA[Tell HN is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Work Force Nexus": {
+    "about": "Work Force Nexus is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Ollie": {
+    "logo": "/assets/company-logos/ollie.png",
+    "about": "Ollie is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Somewhere": {
+    "about": "Somewhere is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Helic & Co.": {
+    "about": "Helic & Co. is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Digital": {
+    "about": "Digital is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Mercier Consultancy Group": {
+    "about": "Mercier Consultancy Group is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Coalition Technologies": {
+    "about": "Coalition Technologies is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "HealthCorps": {
+    "about": "HealthCorps is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "FedEx": {
+    "about": "FedEx is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Empresa Confidencial": {
+    "logo": "/assets/company-logos/empresa-confidencial.png",
+    "about": "Empresa Confidencial is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "INFUSE": {
+    "logo": "/assets/company-logos/infuse.png",
+    "about": "INFUSE is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Sundayy": {
+    "logo": "/assets/company-logos/sundayy.png",
+    "about": "Sundayy is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "FuseGlobal": {
+    "logo": "/assets/company-logos/fuseglobal.png",
+    "about": "FuseGlobal is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Gritter Francona": {
+    "logo": "/assets/company-logos/gritter-francona.png",
+    "about": "Gritter Francona is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Adani Airport Holdings Ltd": {
+    "about": "Adani Airport Holdings Ltd is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Upbound": {
+    "about": "Upbound is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Re-cruit-Lytic": {
+    "about": "Re-cruit-Lytic is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Travel Planning Careers": {
+    "about": "Travel Planning Careers is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Grupo Euroformac": {
+    "logo": "/assets/company-logos/grupo-euroformac.png",
+    "about": "Grupo Euroformac is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "TUS Media": {
+    "logo": "/assets/company-logos/tus-media.png",
+    "about": "TUS Media is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Consensys": {
+    "logo": "/assets/company-logos/consensys.png",
+    "about": "Consensys is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "ADVBOX": {
+    "about": "ADVBOX is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "M\u00c3\u00a9liuz": {
+    "about": "",
+    "industry": "",
+    "size": "",
+    "founded": ""
+  },
+  "RecruitLyticx Hires": {
+    "about": "RecruitLyticx Hires is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "<![CDATA[Show HN": {
+    "about": "<![CDATA[Show HN is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  },
+  "Netlify": {
+    "logo": "/assets/company-logos/netlify.png",
+    "about": "Netlify is a company hiring for remote positions.",
+    "industry": "Technology",
+    "size": "medium",
+    "founded": ""
+  }
+}
