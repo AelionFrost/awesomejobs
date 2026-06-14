@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /data/
+Disallow: /assets/
+
+Sitemap: https://awesomejobs.online/sitemap.xml
+
+# Crawl delay for polite crawling
+Crawl-delay: 10

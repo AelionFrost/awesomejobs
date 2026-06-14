@@ -1,0 +1,387 @@
+{
+  "direct_api_or_feed": [
+    {
+      "name": "remotive-software-dev",
+      "url": "https://remotive.com/api/remote-jobs?category=software-dev&limit=100",
+      "category": "dev"
+    },
+    {
+      "name": "remotive-design",
+      "url": "https://remotive.com/api/remote-jobs?category=design&limit=100",
+      "category": "design"
+    },
+    {
+      "name": "remotive-customer-support",
+      "url": "https://remotive.com/api/remote-jobs?category=customer-support&limit=100",
+      "category": "support"
+    },
+    {
+      "name": "remotive-marketing",
+      "url": "https://remotive.com/api/remote-jobs?category=marketing&limit=100",
+      "category": "marketing"
+    },
+    {
+      "name": "remotive-product",
+      "url": "https://remotive.com/api/remote-jobs?category=product&limit=100",
+      "category": "product"
+    },
+    {
+      "name": "remotive-data",
+      "url": "https://remotive.com/api/remote-jobs?category=data&limit=100",
+      "category": "data"
+    },
+    {
+      "name": "remotive-devops",
+      "url": "https://remotive.com/api/remote-jobs?category=devops-sre&limit=100",
+      "category": "devops"
+    },
+    {
+      "name": "remotive-finance-legal",
+      "url": "https://remotive.com/api/remote-jobs?category=finance-legal&limit=100",
+      "category": "finance"
+    },
+    {
+      "name": "remotive-hr",
+      "url": "https://remotive.com/api/remote-jobs?category=hr&limit=100",
+      "category": "hr"
+    },
+    {
+      "name": "remotive-sales",
+      "url": "https://remotive.com/api/remote-jobs?category=sales&limit=100",
+      "category": "sales"
+    },
+    {
+      "name": "remotive-writing",
+      "url": "https://remotive.com/api/remote-jobs?category=writing&limit=100",
+      "category": "writing"
+    },
+    {
+      "name": "arbeitnow",
+      "url": "https://www.arbeitnow.com/api/job-board-api",
+      "category": "mixed"
+    },
+    {
+      "name": "remoteok",
+      "url": "https://remoteok.com/api",
+      "category": "mixed"
+    },
+    {
+      "name": "weworkremotely-programming",
+      "url": "https://weworkremotely.com/categories/remote-programming-jobs.rss",
+      "category": "dev"
+    },
+    {
+      "name": "weworkremotely-design",
+      "url": "https://weworkremotely.com/categories/remote-design-jobs.rss",
+      "category": "design"
+    },
+    {
+      "name": "weworkremotely-support",
+      "url": "https://weworkremotely.com/categories/remote-customer-support-jobs.rss",
+      "category": "support"
+    },
+    {
+      "name": "weworkremotely-marketing",
+      "url": "https://weworkremotely.com/categories/remote-marketing-jobs.rss",
+      "category": "marketing"
+    },
+    {
+      "name": "weworkremotely-product",
+      "url": "https://weworkremotely.com/categories/remote-product-jobs.rss",
+      "category": "product"
+    },
+    {
+      "name": "weworkremotely-data",
+      "url": "https://weworkremotely.com/categories/remote-data-jobs.rss",
+      "category": "data"
+    },
+    {
+      "name": "weworkremotely-devops",
+      "url": "https://weworkremotely.com/categories/remote-devops-jobs.rss",
+      "category": "devops"
+    },
+    {
+      "name": "weworkremotely-finance",
+      "url": "https://weworkremotely.com/categories/remote-finance-jobs.rss",
+      "category": "finance"
+    },
+    {
+      "name": "weworkremotely-writing",
+      "url": "https://weworkremotely.com/categories/remote-writing-jobs.rss",
+      "category": "writing"
+    },
+    {
+      "name": "weworkremotely-sales",
+      "url": "https://weworkremotely.com/categories/remote-sales-jobs.rss",
+      "category": "sales"
+    }
+  ],
+  "ats_boards": {
+    "greenhouse": [
+      "vercel",
+      "linear",
+      "supabase",
+      "railway",
+      "planetscale",
+      "netlify",
+      "figma",
+      "notion",
+      "shopify",
+      "stripe",
+      "cloudflare",
+      "datadog",
+      "sentry",
+      "tailscale",
+      "flydotio",
+      "neon",
+      "resend",
+      "upstash",
+      "asana",
+      "canva",
+      "spotify",
+      "airbnb",
+      "uber",
+      "slack",
+      "discord",
+      "twilio",
+      "github",
+      "gitlab",
+      "hashicorp",
+      "docker",
+      "mongodb",
+      "elastic",
+      "grafana",
+      "pagerduty",
+      "snowflake",
+      "databricks",
+      "miro",
+      "clickatell",
+      "messagebird",
+      "sendgrid",
+      "mailchimp",
+      "hubspot",
+      "zapier",
+      "clickup",
+      "webflow",
+      "intercom",
+      "loom",
+      "calendly",
+      "brex",
+      "retool",
+      "algolia",
+      "workos",
+      "render",
+      "deno",
+      "stytch"
+    ],
+    "lever": [
+      "notion",
+      "netlify",
+      "framer",
+      "vercel",
+      "stripe",
+      "linear",
+      "supabase",
+      "railway",
+      "spotify",
+      "airbnb",
+      "uber",
+      "slack",
+      "discord",
+      "twilio",
+      "github",
+      "gitlab",
+      "hashicorp",
+      "docker",
+      "mongodb",
+      "elastic",
+      "instacart",
+      "pagerduty",
+      "amplitude",
+      "zapier",
+      "webflow"
+    ]
+  },
+  "llm_extract_candidates": [
+    {
+      "name": "proz",
+      "url": "https://www.proz.com/translation-jobs",
+      "category": "translation"
+    },
+    {
+      "name": "translatorscafe",
+      "url": "https://www.translatorscafe.com/cafe/JobSearch.asp",
+      "category": "translation"
+    },
+    {
+      "name": "translationdirectory",
+      "url": "https://www.translationdirectory.com/jobs.htm",
+      "category": "translation"
+    },
+    {
+      "name": "gengo",
+      "url": "https://www.gengo.com/translator/jobs",
+      "category": "translation"
+    },
+    {
+      "name": "transperfect",
+      "url": "https://www.transperfect.com/careers",
+      "category": "translation"
+    },
+    {
+      "name": "languageline",
+      "url": "https://www.languageline.com/careers",
+      "category": "translation"
+    },
+    {
+      "name": "rws",
+      "url": "https://www.rws.com/careers",
+      "category": "translation"
+    },
+    {
+      "name": "welocalize",
+      "url": "https://www.welocalize.com/careers",
+      "category": "translation"
+    },
+    {
+      "name": "lionbridge",
+      "url": "https://www.lionbridge.com/careers",
+      "category": "translation"
+    },
+    {
+      "name": "keywords",
+      "url": "https://www.keywordsstudios.com/careers",
+      "category": "translation"
+    },
+    {
+      "name": "acolad",
+      "url": "https://www.acolad.com/careers",
+      "category": "translation"
+    },
+    {
+      "name": "translated",
+      "url": "https://www.translated.com/careers",
+      "category": "translation"
+    },
+    {
+      "name": "thebigword",
+      "url": "https://www.thebigword.com/careers",
+      "category": "translation"
+    },
+    {
+      "name": "propio",
+      "url": "https://www.propio.com/careers",
+      "category": "translation"
+    },
+    {
+      "name": "scaleai",
+      "url": "https://www.scaleai.com/careers",
+      "category": "data"
+    },
+    {
+      "name": "outlier",
+      "url": "https://www.outlier.ai/careers",
+      "category": "data"
+    },
+    {
+      "name": "dataannotation",
+      "url": "https://www.dataannotation.tech/careers",
+      "category": "data"
+    },
+    {
+      "name": "telusdigital",
+      "url": "https://www.telusdigital.com/careers",
+      "category": "translation"
+    },
+    {
+      "name": "appen",
+      "url": "https://www.appen.com/careers",
+      "category": "data"
+    },
+    {
+      "name": "centific",
+      "url": "https://www.centific.com/careers",
+      "category": "data"
+    },
+    {
+      "name": "oneforma",
+      "url": "https://www.oneforma.com/careers",
+      "category": "translation"
+    },
+    {
+      "name": "remote-co-dev",
+      "url": "https://remote.co/remote-jobs/developer",
+      "category": "dev"
+    },
+    {
+      "name": "remote-co-writing",
+      "url": "https://remote.co/remote-jobs/writing",
+      "category": "writing"
+    },
+    {
+      "name": "flexjobs-tech",
+      "url": "https://www.flexjobs.com/remote-jobs/technology",
+      "category": "dev"
+    },
+    {
+      "name": "flexjobs-writing",
+      "url": "https://www.flexjobs.com/remote-jobs/writing-editing",
+      "category": "writing"
+    },
+    {
+      "name": "wellfound",
+      "url": "https://wellfound.com/jobs",
+      "category": "dev"
+    },
+    {
+      "name": "ycombinator",
+      "url": "https://www.ycombinator.com/jobs",
+      "category": "dev"
+    },
+    {
+      "name": "devitjobs",
+      "url": "https://devitjobs.com",
+      "category": "dev"
+    },
+    {
+      "name": "nofluffjobs",
+      "url": "https://nofluffjobs.com",
+      "category": "dev"
+    },
+    {
+      "name": "justjoinit",
+      "url": "https://justjoin.it",
+      "category": "dev"
+    },
+    {
+      "name": "jobspresso",
+      "url": "https://jobspresso.co/remote-work/development",
+      "category": "dev"
+    },
+    {
+      "name": "dynamitejobs",
+      "url": "https://dynamitejobs.com/remote-jobs/developers",
+      "category": "dev"
+    },
+    {
+      "name": "skipthedrive",
+      "url": "https://skip-the-drive.com/remote-jobs/it",
+      "category": "dev"
+    },
+    {
+      "name": "outsourcely",
+      "url": "https://outsourcely.com/remote-developer-jobs",
+      "category": "dev"
+    },
+    {
+      "name": "contra",
+      "url": "https://contra.com/discover",
+      "category": "mixed"
+    },
+    {
+      "name": "99designs",
+      "url": "https://99designs.com/jobs",
+      "category": "design"
+    }
+  ]
+}

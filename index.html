@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+(function(){
+  try{
+    var t=localStorage.getItem('aj-theme');
+    if(!t) t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
+    document.documentElement.setAttribute('data-theme',t);
+  }catch(e){}
+})();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AwesomeJobs — Remote & Niche Career Board</title>
+<meta name="description" content="Find your next remote job from 8,000+ curated listings. Software engineering, design, marketing, translation, sales and more. Updated every 15 minutes.">
+<meta name="keywords" content="remote jobs remote jobs, remote work, work from home, remote jobs careers, remote remote jobs positions">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://awesomejobs.online/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://awesomejobs.online/">
+<meta property="og:title" content="AwesomeJobs — Remote & Niche Career Board">
+<meta property="og:description" content="Find your next remote job from 8,000+ curated listings. Software engineering, design, marketing, translation, sales and more. Updated every 15 minutes.">
+<meta property="og:image" content="https://awesomejobs.online/assets/site-logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AwesomeJobs — Remote & Niche Career Board">
+<meta name="twitter:description" content="Find your next remote job from 8,000+ curated listings. Software engineering, design, marketing, translation, sales and more. Updated every 15 minutes.">
+
+<style>
+:root{
+  --bg:#f8fafc; --bg-alt:#f1f5f9; --surface:#fff;
+  --text:#0f172a; --text2:#475569; --muted:#94a3b8;
+  --border:#e2e8f0; --border-light:#f1f5f9;
+  --accent:#2563eb; --accent-h:#1d4ed8; --accent-glow:rgba(37,99,235,.08);
+  --green:#16a34a; --green-bg:rgba(22,163,74,.10);
+  --amber:#d97706; --amber-bg:rgba(217,119,6,.10);
+  --red:#dc2626; --red-bg:rgba(220,38,38,.10);
+  --header-bg:rgba(255,255,255,.85);
+  --shadow:0 1px 2px rgba(0,0,0,.04),0 1px 4px rgba(0,0,0,.06);
+  --shadow-h:0 4px 12px rgba(0,0,0,.08);
+  --radius:10px; --radius-lg:14px;
+  --font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+}
+[data-theme="dark"]{
+  --bg:#0f172a; --bg-alt:#1e293b; --surface:#1e293b;
+  --text:#e2e8f0; --text2:#94a3b8; --muted:#64748b;
+  --border:#334155; --border-light:#1e293b;
+  --accent:#3b82f6; --accent-h:#60a5fa; --accent-glow:rgba(59,130,246,.12);
+  --green:#22c55e; --green-bg:rgba(34,197,94,.12);
+  --amber:#f59e0b; --amber-bg:rgba(245,158,11,.12);
+  --red:#ef4444; --red-bg:rgba(239,68,68,.12);
+  --header-bg:rgba(15,23,42,.92);
+  --shadow:0 1px 2px rgba(0,0,0,.2),0 1px 4px rgba(0,0,0,.3);
+  --shadow-h:0 4px 12px rgba(0,0,0,.4);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.5;-webkit-font-smoothing:antialiased;min-height:100vh}
+
+/* ── HOMESIGNAL BANNER ── */
+.hs-banner{background:#071629;padding:8px 16px;text-align:center}
+.hs-banner a{color:#eaf6ff;text-decoration:none;font-size:.7rem;font-weight:600;display:inline-flex;align-items:center;gap:8px}
+.hs-banner .hs-badge{background:#1268f3;color:#fff;font-size:.55rem;font-weight:700;padding:2px 6px;border-radius:3px;text-transform:uppercase}
+
+/* ── HEADER ── */
+.site-header{position:sticky;top:0;z-index:100;background:var(--header-bg);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.header-inner{max-width:1400px;margin:0 auto;padding:0 18px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:6px}
+.logo{display:flex;align-items:center;gap:4px;text-decoration:none;flex-shrink:0}
+.logo img{width:80px;height:64px;object-fit:contain}
+.logo-text{font-size:2rem;font-weight:800;color:var(--text);letter-spacing:-.03em;white-space:nowrap}
+.logo-text em{font-style:italic;color:var(--accent);font-weight:400}
+.header-nav{display:flex;align-items:center;gap:2px;overflow-x:auto;scrollbar-width:none;flex:1;justify-content:center}
+.header-nav::-webkit-scrollbar{display:none}
+.header-nav a{white-space:nowrap;padding:4px 5px;border-radius:5px;font-size:.9rem;font-weight:700;color:var(--text2);text-decoration:none;transition:all .12s}
+.header-nav a:hover{color:var(--accent);background:var(--accent-glow)}
+.header-nav a.active{color:var(--accent);background:var(--accent-glow)}
+.header-actions{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.live-badge{display:flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;background:var(--green-bg);color:var(--green);font-size:.7rem;font-weight:700;white-space:nowrap}
+.live-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse-dot 2s ease-in-out infinite}
+@keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:.4}}
+.theme-btn{width:28px;height:28px;border-radius:6px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .12s;font-size:13px;line-height:1;flex-shrink:0}
+.theme-btn:hover{color:var(--accent);border-color:var(--accent)}
+.theme-btn .icon-moon{display:none}
+[data-theme="dark"] .theme-btn .icon-sun{display:none}
+[data-theme="dark"] .theme-btn .icon-moon{display:block}
+.social-links{display:flex;align-items:center;gap:6px}
+.social-link{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--muted);text-decoration:none;border:1px solid var(--border);transition:all .12s}
+.social-link:hover{color:var(--accent);border-color:var(--accent)}
+
+/* ── HERO ── */
+.hero{background:var(--bg);padding:40px 24px 0}
+.hero-inner{max-width:1400px;margin:0 auto}
+.hero-label{display:flex;align-items:center;gap:8px;color:var(--text2);font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;margin-bottom:22px}
+.hero-label::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px var(--green-bg)}
+.hero-strip{display:grid;grid-template-columns:340px minmax(0,640px);gap:34px;align-items:center;padding:26px;border-radius:var(--radius-lg);margin-left:auto;margin-right:80px;width:fit-content}
+.hero-copy{text-align:left}
+.hero-logo{width:340px;max-width:100%;display:block;object-fit:contain}
+.hero h1{font-size:clamp(2.4rem,5vw,4.2rem);font-weight:850;line-height:.92;letter-spacing:-.03em;color:var(--text)}
+.hero h1 em{display:block;color:var(--accent);font-weight:400;font-style:italic}
+.hero p{font-size:.95rem;color:var(--text2);line-height:1.4;margin-top:20px;max-width:600px}
+.hero-actions{display:flex;align-items:center;gap:10px;margin-top:28px;flex-wrap:wrap}
+.hero-btn{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:0 16px;border-radius:6px;text-decoration:none;font-weight:800;font-size:.8rem;transition:all .12s}
+.hero-btn-primary{background:var(--accent);color:#fff}
+.hero-btn-primary:hover{background:var(--accent-h)}
+.hero-btn-live{background:var(--green);color:#fff;cursor:default}
+.hero-refresh{display:inline-flex;align-items:center;gap:9px;padding:4px 12px 4px 6px;border:0;border-radius:999px;background:transparent;color:var(--text2);font-size:.72rem;font-weight:800}
+.hero-refresh-ring{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--refresh-color,#ef4444) var(--refresh-progress,100%),rgba(255,255,255,.14) 0);box-shadow:0 0 0 1px var(--border) inset}
+.hero-refresh-ring::before{content:"";width:18px;height:18px;border-radius:50%;background:var(--bg);box-shadow:0 0 0 1px var(--border)}
+.hero-refresh-text{display:flex;flex-direction:column;gap:1px;line-height:1.05}
+.hero-refresh-label{font-size:.55rem;color:var(--muted);text-transform:uppercase;letter-spacing:.11em}
+.hero-refresh-time{font-size:.78rem;color:var(--text)}
+
+/* ── FILTER SECTION ── */
+.filter-section{max-width:1400px;margin:0 auto;padding:4px 24px 8px}
+.filter-panel{border-radius:var(--radius-lg)}
+.filter-main{padding:28px;text-align:center}
+.filter-kicker{display:inline-flex;align-items:center;gap:6px;margin-bottom:14px;padding:6px 11px;border-radius:999px;background:var(--bg);color:var(--accent);font-size:.7rem;font-weight:900;text-transform:uppercase;letter-spacing:.06em}
+.filter-headline{font-size:clamp(2rem,4vw,3.2rem);font-weight:950;letter-spacing:-.025em;line-height:1;color:var(--text);margin-bottom:18px}
+.filter-headline em{font-style:italic;color:var(--accent);font-weight:400}
+.filter-shell{display:flex;align-items:center;gap:10px;min-height:52px;padding:4px 4px 4px 20px;border-radius:var(--radius-lg);border:2px solid var(--accent-glow);background:var(--bg);box-shadow:var(--shadow);max-width:960px;margin:0 auto}
+.filter-shell input{flex:1;height:44px;border:0;outline:none;background:transparent;color:var(--text);font-size:1.05rem;font-weight:700;font-family:inherit}
+.filter-shell input::placeholder{color:var(--muted);font-weight:600}
+.filter-go{height:44px;min-width:130px;border:0;border-radius:var(--radius);background:var(--accent);color:#fff;font-size:.95rem;font-weight:900;cursor:pointer;font-family:inherit;transition:background .12s}
+.filter-go:hover{background:var(--accent-h)}
+.filter-kicker-wrap{text-align:center}
+.filter-headline-wrap{text-align:center}
+.filter-hint{font-size:.78rem;color:var(--text2);font-weight:650;margin-top:10px;text-align:center}
+.filter-presets{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;justify-content:center}
+.filter-presets button{padding:7px 14px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:var(--text2);font-size:.74rem;font-weight:800;cursor:pointer;font-family:inherit;transition:all .12s}
+.filter-presets button:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.filter-active{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;min-height:28px}
+.filter-active button{padding:4px 10px;border-radius:999px;border:1px solid var(--green-bg);background:var(--green-bg);color:var(--green);font-size:.68rem;font-weight:700;cursor:pointer;font-family:inherit}
+.filter-hidden{display:none}
+
+/* ── LOGO STRIP ── */
+.logo-strip{max-width:1400px;margin:0 auto;padding:12px 24px 72px;background:#0a1628;border-radius:12px;margin-top:16px;margin-bottom:16px}
+.logo-row{display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap}
+.logo-row img{height:28px;width:auto;object-fit:contain;opacity:.8;filter:brightness(0) invert(1);transition:opacity .2s}
+.logo-row img:hover{opacity:1}
+[data-theme="light"] .logo-row img{opacity:.6;filter:brightness(0) invert(0.35)}
+[data-theme="light"] .logo-row img:hover{opacity:.9;filter:brightness(0) invert(0.5)}
+[data-theme="light"] .logo-strip{background:transparent}
+.logo-row-extra{gap:36px;margin-top:16px}
+.logo-row-extra img{height:32px}
+
+/* ── SEARCH RESULTS ── */
+.search-results{max-width:1400px;margin:0 auto;padding:0 24px 24px}
+.sr-header{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.sr-header h2{font-size:1.1rem;font-weight:800;color:var(--text)}
+.sr-count{font-size:.75rem;color:var(--muted);font-weight:600}
+.sr-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+
+/* ── FEATURED ── */
+.featured-section{max-width:1400px;margin:0 auto;padding:12px 24px 40px}
+.featured-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.featured-card{border-radius:var(--radius-lg);padding:24px;color:#fff;display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden;min-height:240px}
+.featured-card::before{content:"";position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:radial-gradient(circle,rgba(255,255,255,.08) 0%,transparent 70%);border-radius:50%}
+.featured-card-it{background:linear-gradient(135deg,#1e3a8a,#1e40af,#2563eb);box-shadow:0 8px 32px rgba(37,99,235,.25)}
+.featured-card-it::after{content:"</>";position:absolute;bottom:-16px;right:14px;font-size:6rem;font-weight:900;font-family:monospace;color:#fff;opacity:.12;pointer-events:none;z-index:0}
+.featured-card-tr{background:linear-gradient(135deg,#0f766e,#14b8a6,#22d3ee);box-shadow:0 8px 32px rgba(20,184,166,.25)}
+.featured-card-tr::after{content:"Aa";position:absolute;bottom:-16px;right:16px;font-size:6rem;font-weight:900;font-family:serif;color:#fff;opacity:.12;pointer-events:none;z-index:0}
+.featured-card>*{position:relative;z-index:1}
+.featured-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.featured-type{display:inline-flex;align-items:center;gap:5px;font-size:.6rem;font-weight:700;padding:4px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:.06em;background:rgba(255,255,255,.15)}
+.featured-company{display:flex;align-items:center;gap:6px;font-size:.85rem;font-weight:600;color:rgba(255,255,255,.75)}
+.featured-title{font-size:1.6rem;font-weight:800;letter-spacing:-.02em;line-height:1.2;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.featured-desc{font-size:.82rem;color:rgba(255,255,255,.65);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.featured-tags{display:flex;flex-wrap:wrap;gap:4px}
+.featured-tag{background:rgba(255,255,255,.1);color:rgba(255,255,255,.8);padding:2px 8px;border-radius:4px;font-size:.55rem;font-weight:600}
+.featured-meta{display:flex;flex-wrap:wrap;gap:8px;font-size:.7rem;color:rgba(255,255,255,.65)}
+.featured-salary{background:rgba(16,185,129,.3);color:#6ee7b7;font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:4px}
+.featured-apply{display:inline-flex;align-items:center;gap:6px;padding:10px 24px;border-radius:7px;font-size:.8rem;font-weight:700;text-decoration:none;width:fit-content;border:0;font-family:inherit;cursor:pointer;transition:all .12s;margin-top:auto}
+.featured-apply-it{background:#fff;color:#1e40af}
+.featured-apply-it:hover{background:#dbeafe}
+.featured-apply-tr{background:#fff;color:#0f766e}
+.featured-apply-tr:hover{background:#ccfbf1}
+
+/* ── JOB COLUMNS ── */
+.columns-section{max-width:1400px;margin:0 auto;padding:0 24px 24px}
+.columns-section+.columns-section{margin-top:48px}
+.columns-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.col{display:flex;flex-direction:column;gap:0}
+.col-header{display:flex;align-items:center;justify-content:space-between;padding:0 0 16px;border-bottom:1px solid var(--border);margin-bottom:14px}
+.col-title{display:flex;align-items:center;gap:12px}
+.col-title h2{font-size:2rem;font-weight:900;letter-spacing:-.03em}
+.col-title h2.it-title{color:var(--accent)}
+.col-title h2.tr-title{color:#14b8a6}
+.col-title h2.support-title{color:#0ea5e9}
+.col-title h2.devops-title{color:#6366f1}
+.col-count{font-size:1rem;color:var(--text2);background:var(--bg-alt);padding:4px 12px;border-radius:999px;font-weight:700}
+
+/* ── JOB CARDS ── */
+.job-list{display:flex;flex-direction:column;gap:10px}
+.job-card{display:flex;flex-direction:column;padding:18px 20px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);gap:6px;transition:box-shadow .15s,transform .12s;position:relative;overflow:hidden;height:250px}
+.job-card:hover{box-shadow:var(--shadow-h);transform:translateY(-1px)}
+.job-card::after{content:"";position:absolute;top:0;right:0;width:0;height:0;border-top:32px solid var(--cat-clr,#3b82f6);border-left:32px solid transparent;opacity:.85;pointer-events:none;z-index:1}
+.job-card>*{position:relative;z-index:2}
+.job-card-title{font-size:1.35rem;font-weight:900;line-height:1.15;color:var(--text);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;flex-shrink:0;padding-right:8px;margin-bottom:2px}
+.job-card-company{font-size:.72rem;font-weight:600;color:var(--text2);flex-shrink:0;padding-right:8px}
+.job-card-bubbles{display:flex;gap:3px;flex-wrap:wrap;margin:2px 0;flex-shrink:0}
+.job-bubble{display:inline-flex;align-items:center;padding:2px 6px;border-radius:3px;color:#fff;font-size:.5rem;font-weight:800;line-height:1}
+.job-bubble.is-main{box-shadow:0 0 0 1px rgba(255,255,255,.2) inset}
+.job-card-desc{font-size:.7rem;color:var(--text2);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;flex:1;min-height:0}
+.job-card-info{font-size:.65rem;color:var(--muted);line-height:1.3;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;flex-shrink:0}
+.job-tags{display:flex;flex-wrap:wrap;gap:2px;flex-shrink:0;min-height:16px}
+.job-tag{display:inline-block;padding:1px 5px;border-radius:3px;font-size:.48rem;font-weight:600;background:var(--accent-glow);color:var(--accent)}
+.job-card-footer{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:6px;flex-shrink:0;gap:8px;min-height:32px}
+.job-footer-meta{display:flex;align-items:center;gap:5px;flex:1;min-width:0;overflow:hidden}
+.job-time{font-size:.6rem;font-weight:700;padding:2px 6px;border-radius:4px;white-space:nowrap}
+.job-time.fresh{background:var(--green-bg);color:var(--green)}
+.job-time.recent{background:var(--amber-bg);color:var(--amber)}
+.job-time.old{background:var(--red-bg);color:var(--red)}
+.job-source{font-size:.5rem;color:var(--muted);text-transform:uppercase;letter-spacing:.03em;font-weight:600}
+.job-apply{display:inline-flex;align-items:center;gap:4px;padding:7px 16px;border-radius:6px;background:var(--accent);color:#fff;font-size:.75rem;font-weight:800;text-decoration:none;transition:all .12s;white-space:nowrap;flex-shrink:0}
+.job-apply:hover{background:var(--accent-h)}
+.job-salary{display:inline-flex;align-items:center;gap:2px;background:var(--green-bg);color:var(--green);font-size:.52rem;font-weight:600;padding:1px 5px;border-radius:3px}
+
+/* ── STATE ── */
+.state-box{text-align:center;padding:40px 20px;color:var(--text2);grid-column:1/-1}
+.state-spinner{display:inline-block;width:22px;height:22px;border:2px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite;margin-bottom:8px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.state-box h3{font-size:.9rem;color:var(--text);margin-bottom:4px}
+.state-box p{font-size:.75rem}
+
+/* ── PAGINATION ── */
+.pair-pagination{max-width:1400px;margin:0 auto;padding:6px 24px 48px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.secondary-columns{margin-top:200px}
+.pair-summary{font-size:.75rem;color:var(--text2);font-weight:650}
+.pair-summary strong{color:var(--text)}
+.pair-controls{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.pair-btn{min-width:30px;height:30px;padding:0 8px;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--text2);font-size:.7rem;font-weight:700;cursor:pointer;font-family:inherit;transition:all .12s;display:flex;align-items:center;justify-content:center}
+.pair-btn:hover{color:var(--accent);border-color:var(--accent)}
+.pair-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.pair-btn:disabled{opacity:.35;cursor:not-allowed}
+.pair-ellipsis{color:var(--muted);font-size:.75rem;font-weight:800;padding:0 2px}
+
+/* ── FOOTER ── */
+.site-footer{border-top:1px solid var(--border);background:var(--bg-alt);margin-top:32px}
+.footer-inner{max-width:1400px;margin:0 auto;padding:24px;text-align:center}
+.footer-social{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:10px}
+.footer-social .social-link{width:30px;height:30px}
+.footer-inner p{font-size:.65rem;color:var(--muted);margin-bottom:4px}
+.footer-inner a{color:var(--accent);text-decoration:none}
+
+/* ── COOKIE ── */
+.cookie-bar{position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--surface);border-top:1px solid var(--border);padding:10px 24px;display:none;animation:slideUp .3s ease;box-shadow:0 -4px 20px rgba(0,0,0,.08)}
+.cookie-bar.show{display:block}
+@keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+.cookie-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.cookie-text{font-size:.6rem;color:var(--muted);flex:1;min-width:180px}
+.cookie-text a{color:var(--accent);text-decoration:underline}
+.cookie-actions{display:flex;gap:5px;flex-shrink:0}
+.cookie-btn{padding:5px 12px;border-radius:5px;font-size:.55rem;font-weight:600;cursor:pointer;border:0;font-family:inherit;transition:all .12s}
+.cookie-btn-accept{background:var(--accent);color:#fff}
+.cookie-btn-accept:hover{background:var(--accent-h)}
+.cookie-btn-decline{background:var(--bg-alt);color:var(--text2);border:1px solid var(--border)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1080px){
+  .social-links{display:none}
+  .hero-strip{grid-template-columns:1fr;text-align:center;padding:24px;width:100%}
+  .hero-logo{width:min(70vw,280px);margin:0 auto}
+  .hero-copy{text-align:center}
+  .hero p{margin:20px auto 0}
+  .hero-actions{justify-content:center}
+}
+@media(max-width:768px){
+  .site-header{box-shadow:0 1px 3px rgba(0,0,0,.06)}
+  .header-inner{padding:0 14px;height:56px;flex-wrap:wrap;gap:8px}
+.logo img{width:28px;height:22px}
+.logo-text{font-size:1.05rem}
+.header-nav{order:3;flex-basis:100%;justify-content:flex-start;gap:2px;padding:4px 0 8px}
+.header-nav a{font-size:.72rem;padding:4px 8px}
+.hero{padding:24px 14px 0}
+.hero-strip{padding:18px;gap:16px}
+.hero h1{font-size:clamp(1.8rem,8vw,2.6rem)}
+.hero p{font-size:.85rem;margin-top:14px}
+.hero-actions{margin-top:18px}
+.featured-grid{grid-template-columns:1fr;gap:16px}
+.columns-grid{grid-template-columns:1fr;gap:16px}
+.col-title h2{font-size:1.5rem}
+.sr-grid{grid-template-columns:1fr;gap:16px}
+.filter-section{padding:16px 14px 24px}
+.filter-main{padding:18px}
+.filter-shell{flex-wrap:wrap;min-height:0;padding:10px 14px;gap:8px}
+.filter-shell input{height:40px;font-size:.9rem;width:100%}
+.filter-go{width:100%;height:40px;min-width:0}
+.filter-hint{display:none}
+.logo-strip{padding:4px 14px 18px}
+.logo-row{gap:20px}
+.logo-row img{height:18px}
+.logo-row-extra img{height:20px}
+.pair-pagination{flex-direction:column;align-items:flex-start;padding:6px 14px 24px;gap:8px}
+.columns-section{padding:0 14px 16px}
+.featured-section{padding:0 14px 24px}
+.job-list{gap:8px}
+.job-card{height:220px;padding:14px 16px}
+.job-card-title{font-size:1.1rem;padding-right:6px}
+.job-card-desc{font-size:.65rem;-webkit-line-clamp:2}
+.job-card-footer{min-height:28px}
+.job-apply{padding:5px 12px;font-size:.65rem}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "AwesomeJobs",
+  "url": "https://awesomejobs.online",
+  "description": "Remote job board aggregating listings from 50+ sources.",
+  "sameAs": [
+    "https://x.com/_AwesomeJobs_",
+    "https://www.instagram.com/awesome_jobs_/",
+    "https://www.linkedin.com/in/awesomejobs"
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="hs-banner">
+  <a href="https://homesignal.online/" target="_blank" rel="noopener">🏠 HomeSignal — Smart-home deals &amp; reviews</a>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <img src="assets/site-logo.png" alt="AwesomeJobs">
+      <span class="logo-text">Awesome<em>Jobs</em></span>
+    </a>
+    <nav class="header-nav">
+      <a href="/">All</a>
+      <a href="/remote-developer-jobs.html">Dev</a>
+      <a href="/remote-devops-jobs.html">DevOps</a>
+      <a href="/remote-data-jobs.html">Data</a>
+      <a href="/remote-design-jobs.html">Design</a>
+      <a href="/remote-translation-jobs.html">Translation</a>
+      <a href="/remote-writing-jobs.html">Writing</a>
+      <a href="/remote-marketing-jobs.html">Marketing</a>
+      <a href="/remote-sales-jobs.html">Sales</a>
+      <a href="/remote-support-jobs.html">Support</a>
+      <a href="/remote-finance-jobs.html">Finance</a>
+      <a href="/remote-hr-jobs.html">HR</a>
+      <a href="/remote-qa-jobs.html">QA</a>
+    </nav>
+    <div class="header-actions">
+      <div class="social-links">
+        <a class="social-link" href="https://x.com/_AwesomeJobs_" target="_blank" rel="noopener" aria-label="X"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2h3.3l-7.2 8.2L23.5 22h-6.7l-5.2-6.8L5.6 22H2.3l7.7-8.8L1.8 2h6.8l4.7 6.2L18.9 2Zm-1.2 18h1.8L7.6 3.9H5.7L17.7 20Z"/></svg></a>
+        <a class="social-link" href="https://www.instagram.com/awesome_jobs_/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm4.2 3.4a4.6 4.6 0 1 1 0 9.2 4.6 4.6 0 0 1 0-9.2Zm0 2a2.6 2.6 0 1 0 0 5.2 2.6 2.6 0 0 0 0-5.2Zm4.9-2.6a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z"/></svg></a>
+        <a class="social-link" href="https://www.linkedin.com/in/awesomejobs" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.38 8.1h4.24V23H.38V8.1ZM8.02 8.1h4.06v2.04h.06c.57-1.08 1.96-2.22 4.03-2.22 4.31 0 5.11 2.84 5.11 6.53V23h-4.24v-7.58c0-1.81-.03-4.13-2.52-4.13-2.52 0-2.9 1.97-2.9 4V23H8.02V8.1Z"/></svg></a>
+      </div>
+      <span class="live-badge"><span class="dot"></span><span id="live-count">0</span></span>
+      <button class="theme-btn" id="theme-btn" aria-label="Toggle theme">
+        <svg class="icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-strip">
+      <img class="hero-logo" src="assets/logo-text-hero.png" alt="AwesomeJobs">
+      <div class="hero-copy">
+        <h1>Jobs from everywhere. <em>One clean board.</em></h1>
+        <p>Curated listings from top remote boards, company ATS, and crypto-native career sites. Updated EVERY 15 MIN.</p>
+        <div class="hero-actions">
+          <a class="hero-btn hero-btn-primary" href="#it-col">View latest jobs</a>
+          <span class="hero-btn hero-btn-live" id="hero-live-count">—</span>
+          <span class="hero-refresh">
+            <span class="hero-refresh-ring" id="refresh-ring"></span>
+            <span class="hero-refresh-text">
+              <span class="hero-refresh-label">Next refresh</span>
+              <span class="hero-refresh-time" id="refresh-time">15:00</span>
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="featured-section">
+  <div class="featured-grid" id="featured-grid"></div>
+</section>
+
+<section class="logo-strip">
+  <div class="logo-row">
+    <img src="assets/logos/twilio.svg" alt="Twilio">
+    <img src="assets/logos/airbnb.svg" alt="Airbnb">
+    <img src="assets/logos/coinbase.svg" alt="Coinbase">
+    <img src="assets/logos/databricks.svg" alt="Databricks">
+    <img src="assets/logos/grafana.svg" alt="Grafana">
+  </div>
+  <div class="logo-row logo-row-extra">
+    <img src="assets/logos/new-relic.png" alt="New Relic">
+    <img src="assets/logos/proz.png" alt="ProZ">
+    <img src="assets/logos/spotify.png" alt="Spotify">
+    <img src="assets/logos/transperfect.png" alt="TransPerfect">
+  </div>
+</section>
+
+<section class="filter-section">
+  <div class="filter-panel">
+    <div class="filter-main">
+      <div class="filter-kicker-wrap"><div class="filter-kicker">AI Powered Search</div></div>
+      <div class="filter-headline-wrap"><div class="filter-headline">Ask for <em>the job</em> you want.</div></div>
+      <div class="filter-shell">
+        <input id="search-input" type="search" placeholder="Example: Find me remote sales jobs with CRM, posted this week" autocomplete="off">
+        <button class="filter-go" id="search-go">AI Search</button>
+      </div>
+      <div class="filter-hint">Type naturally. We detect category, salary, freshness, company, and keywords.</div>
+      <div class="filter-presets">
+        <button data-preset="fresh-dev"><strong>Fresh dev roles</strong></button>
+        <button data-preset="paid-dev"><strong>Paid IT only</strong></button>
+        <button data-preset="sales-crm"><strong>Sales + CRM</strong></button>
+        <button data-preset="writing"><strong>Writing gigs</strong></button>
+        <button data-preset="translation"><strong>Translation work</strong></button>
+      </div>
+      <div class="filter-active" id="active-filters"></div>
+    </div>
+    <select id="filter-cat" class="filter-hidden"><option value="all">All</option><option value="it">IT</option><option value="tr">Translation</option><option value="salary">Salary</option></select>
+    <select id="filter-sort" class="filter-hidden"><option value="newest">Newest</option><option value="oldest">Oldest</option><option value="salary">Salary first</option></select>
+    <select id="filter-source" class="filter-hidden"><option value="all">All providers</option></select>
+    <select id="filter-company" class="filter-hidden"><option value="all">All companies</option></select>
+    <button id="filter-reset" class="filter-hidden">Reset</button>
+  </div>
+</section>
+
+<section class="search-results" id="search-results" style="display:none">
+  <div class="sr-header">
+    <h2>Search Results</h2>
+    <span class="sr-count" id="sr-count"></span>
+  </div>
+  <div class="sr-grid" id="sr-grid"></div>
+</section>
+
+<section class="columns-section" id="it-col">
+  <div class="columns-grid" id="primary-grid">
+    <div class="col">
+      <div class="col-header">
+        <div class="col-title"><h2 class="it-title">IT / Development</h2><span class="col-count" id="it-count">0</span></div>
+      </div>
+      <div class="job-list" id="it-list"></div>
+    </div>
+    <div class="col">
+      <div class="col-header">
+        <div class="col-title"><h2 class="tr-title">Translation &amp; Writing</h2><span class="col-count" id="tr-count">0</span></div>
+      </div>
+      <div class="job-list" id="tr-list"></div>
+    </div>
+  </div>
+</section>
+
+<section class="pair-pagination" id="primary-pagination"></section>
+
+<section class="columns-section secondary-columns">
+  <div class="columns-grid" id="secondary-grid">
+    <div class="col">
+      <div class="col-header">
+        <div class="col-title"><h2 class="support-title">Support</h2><span class="col-count" id="support-count">0</span></div>
+      </div>
+      <div class="job-list" id="support-list"></div>
+    </div>
+    <div class="col">
+      <div class="col-header">
+        <div class="col-title"><h2 class="devops-title">DevOps</h2><span class="col-count" id="devops-count">0</span></div>
+      </div>
+      <div class="job-list" id="devops-list"></div>
+    </div>
+  </div>
+</section>
+
+<section class="pair-pagination" id="secondary-pagination"></section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-social">
+      <a class="social-link" href="https://x.com/_AwesomeJobs_" target="_blank" rel="noopener" aria-label="X"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2h3.3l-7.2 8.2L23.5 22h-6.7l-5.2-6.8L5.6 22H2.3l7.7-8.8L1.8 2h6.8l4.7 6.2L18.9 2Zm-1.2 18h1.8L7.6 3.9H5.7L17.7 20Z"/></svg></a>
+      <a class="social-link" href="https://www.instagram.com/awesome_jobs_/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm4.2 3.4a4.6 4.6 0 1 1 0 9.2 4.6 4.6 0 0 1 0-5.2Zm0 2a2.6 2.6 0 1 0 0 5.2 2.6 2.6 0 0 0 0-5.2Zm4.9-2.6a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z"/></svg></a>
+      <a class="social-link" href="https://www.linkedin.com/in/awesomejobs" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.38 8.1h4.24V23H.38V8.1ZM8.02 8.1h4.06v2.04h.06c.57-1.08 1.96-2.22 4.03-2.22 4.31 0 5.11 2.84 5.11 6.53V23h-4.24v-7.58c0-1.81-.03-4.13-2.52-4.13-2.52 0-2.9 1.97-2.9 4V23H8.02V8.1Z"/></svg></a>
+    </div>
+    <p>© 2026 <a href="/">AwesomeJobs.online</a> — Remote job board. 8,000+ curated listings from 50+ sources.</p>
+    <p><a href="/">Jobs</a> · <a href="/about.html">About</a> · <a href="/sitemap.html">Sitemap</a> · <a href="/blog-remote-developer-jobs.html">Developer Jobs</a> · <a href="/blog-land-remote-job.html">Remote Work Guide</a> · <a href="/blog-highest-paying-remote-jobs.html">Salary Guide</a> · <a href="/blog-remote-work-tools.html">Tools</a> · <a href="/blog-best-remote-companies.html">Top Companies</a></p>
+  </div>
+</footer>
+
+<div class="cookie-bar" id="cookie-bar">
+  <div class="cookie-inner">
+    <div class="cookie-text">We use cookies to improve your experience and analyze traffic. <a href="#">Learn more</a></div>
+    <div class="cookie-actions"><button class="cookie-btn cookie-btn-decline" id="cookie-decline">Decline</button><button class="cookie-btn cookie-btn-accept" id="cookie-accept">Accept All</button></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  let allJobs=[];
+  let itJobs=[], trJobs=[], supportJobs=[], devopsJobs=[];
+  let pagedJobs=[];
+  let primaryPage=1, secondaryPage=1;
+  const PER_PAGE=12;
+
+  const itList=document.getElementById('it-list');
+  const trList=document.getElementById('tr-list');
+  const supportList=document.getElementById('support-list');
+  const devopsList=document.getElementById('devops-list');
+  const itCount=document.getElementById('it-count');
+  const trCount=document.getElementById('tr-count');
+  const supportCount=document.getElementById('support-count');
+  const devopsCount=document.getElementById('devops-count');
+  const primaryPag=document.getElementById('primary-pagination');
+  const secondaryPag=document.getElementById('secondary-pagination');
+  const featuredGrid=document.getElementById('featured-grid');
+  const liveEl=document.getElementById('live-count');
+  const heroLive=document.getElementById('hero-live-count');
+  const searchEl=document.getElementById('search-input');
+  const searchGo=document.getElementById('search-go');
+  const filterCat=document.getElementById('filter-cat');
+  const filterSort=document.getElementById('filter-sort');
+  const filterSrc=document.getElementById('filter-source');
+  const filterCmp=document.getElementById('filter-company');
+  const filterReset=document.getElementById('filter-reset');
+  const activeFilters=document.getElementById('active-filters');
+  const themeBtn=document.getElementById('theme-btn');
+
+  function esc(s){const d=document.createElement('div');d.textContent=s||'';return d.innerHTML}
+
+  function timeAgo(d){
+    if(!d) return {text:'',cls:'old'};
+    try{
+      const diff=Date.now()-new Date(d).getTime();
+      const m=Math.max(1,Math.floor(diff/6e4));
+      if(m<60) return {text:m+'m ago',cls:'fresh'};
+      const h=Math.floor(m/60);
+      if(h<24) return {text:h+'h ago',cls:'fresh'};
+      const dd=Math.floor(h/24);
+      if(dd<=5) return {text:dd+'d ago',cls:'fresh'};
+      if(dd<14) return {text:dd+'d ago',cls:'recent'};
+      if(dd<30) return {text:dd+'d ago',cls:'old'};
+      return {text:Math.floor(dd/30)+'mo ago',cls:'old'};
+    }catch(e){return {text:'',cls:'old'}}
+  }
+
+  function sortKey(j){
+    const d=j.date_posted||'';
+    if(typeof d==='number') return d>1e12?d/1000:d;
+    return new Date(d).getTime()||0;
+  }
+
+  function hasSal(j){return j.salary&&j.salary.trim().length>0}
+
+  const CAT_KEYS=['translation','writing','it','devops','data','design','finance','hr','qa','sales','support','marketing'];
+  const CAT_LABELS={it:'Dev',devops:'DevOps',data:'Data',design:'Design',finance:'Finance',hr:'HR',qa:'QA',sales:'Sales',support:'Support',translation:'Translation',writing:'Writing',marketing:'Marketing'};
+  const CAT_COLORS={it:'#3b82f6',devops:'#6366f1',data:'#06b6d4',design:'#ec4899',finance:'#22c55e',hr:'#f59e0b',qa:'#8b5cf6',sales:'#f97316',support:'#0ea5e9',translation:'#14b8a6',writing:'#14b8a6',marketing:'#f43f5e'};
+  const CAT_RE={
+    it:/developer|engineer|software|frontend|backend|fullstack|programmer|javascript|typescript|python|java|react|node|api|mobile|ios|android|security|coding/,
+    devops:/devops|sre|cloud|aws|azure|gcp|docker|kubernetes|terraform|infrastructure/,
+    data:/data|analyst|analytics|sql|machine learning|\bml\b|\bai\b|business intelligence/,
+    design:/design|designer|\bux\b|\bui\b|figma|creative/,
+    finance:/finance|financial|accounting|bookkeeping|payroll|fintech/,
+    hr:/\bhr\b|recruit|talent|people operations/,
+    qa:/\bqa\b|quality assurance|tester|testing|automation/,
+    sales:/sales|account executive|\bsdr\b|\bbdr\b|crm|revenue/,
+    support:/support|customer success|help ?desk|service desk|customer service/,
+    translation:/translation|translator|locali[sz]ation|linguist|interpreter|proz/,
+    writing:/writing|writer|copywriter|editor|proofread|content/,
+    marketing:/marketing|growth|seo|campaign|social media|brand/
+  };
+
+  function jobCat(j){
+    const h=[j.title,j.company,j.description,(j.tags||[]).join(' '),j.subcategory].join(' ').toLowerCase();
+    if(j.subcategory==='translation'||j.source==='proz') return 'translation';
+    for(let k of CAT_KEYS){
+      if(CAT_RE[k].test(h)) return k;
+    }
+    return 'it';
+  }
+
+  function isTr(j){return jobCat(j)==='translation'||jobCat(j)==='writing'}
+  function isSupport(j){return jobCat(j)==='support'}
+  function isDevOps(j){return jobCat(j)==='devops'}
+
+  function catBubbles(j,primary){
+    const h=[j.title,j.company,j.description,(j.tags||[]).join(' '),j.subcategory].join(' ').toLowerCase();
+    const found=[primary];
+    for(let k of CAT_KEYS){
+      if(k!==primary&&CAT_RE[k].test(h)&&!found.includes(k)) found.push(k);
+    }
+    return found.slice(0,4).map(k=>'<span class="job-bubble job-bubble-'+k+(k===primary?' is-main':'')+'" style="background:'+CAT_COLORS[k]+'">'+esc(CAT_LABELS[k])+'</span>').join('');
+  }
+
+  function renderCard(j,primary){
+    const cat=primary||jobCat(j);
+    const clr=CAT_COLORS[cat]||'#3b82f6';
+    const tags=(j.tags||[]).slice(0,5).map(t=>'<span class="job-tag">'+esc(t)+'</span>').join('');
+    const time=timeAgo(j.date_posted);
+    const timeHtml='<span class="job-time '+time.cls+'">'+esc(time.text||'Fresh')+'</span>';
+    const salary=hasSal(j)?'<span class="job-salary">'+esc(j.salary)+'</span>':'';
+    const src=(j.source||'direct').replace(/[-_]+/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
+    const desc=(j.description||j.ai_card_summary||'').replace(/<[^>]+>/g,'').trim().replace(/\s+/g,' ').substring(0,180);
+    const bubbles=catBubbles(j,cat);
+    return '<article class="job-card" style="--cat-clr:'+clr+'">'+
+      '<div class="job-card-title">'+esc(j.title)+'</div>'+
+      '<div class="job-card-company">'+esc(j.company||'Remote Company')+'</div>'+
+      (bubbles?'<div class="job-card-bubbles">'+bubbles+'</div>':'')+
+      (desc?'<div class="job-card-desc">'+esc(desc)+'</div>':'')+
+      '<div class="job-card-info">📍 '+esc(j.location||'Remote')+' · '+esc(src)+' · '+esc(CAT_LABELS[cat]||cat)+'</div>'+
+      (tags?'<div class="job-tags">'+tags+'</div>':'')+
+      '<div class="job-card-footer">'+
+        '<div class="job-footer-meta">'+timeHtml+salary+'</div>'+
+        '<a class="job-apply" href="'+esc(j.apply_url||'#')+'" target="_blank" rel="noopener">Apply</a>'+
+      '</div>'+
+    '</article>';
+  }
+
+  function getFiltered(){
+    let jobs=[...allJobs];
+    const q=searchEl?searchEl.value.trim().toLowerCase():'';
+    if(q){
+      const words=q.split(/\s+/).filter(Boolean);
+      jobs=jobs.filter(j=>{
+        const h=[j.title,j.company,j.description,j.location,(j.tags||[]).join(' ')].join(' ').toLowerCase();
+        return words.some(w=>h.indexOf(w)!==-1);
+      });
+    }
+    const cat=filterCat?filterCat.value:'all';
+    if(cat==='salary') jobs=jobs.filter(hasSal);
+    else if(cat==='it') jobs=jobs.filter(j=>!isTr(j));
+    else if(cat==='tr') jobs=jobs.filter(isTr);
+    const sort=filterSort?filterSort.value:'newest';
+    if(sort==='oldest') jobs.sort((a,b)=>sortKey(a)-sortKey(b));
+    else if(sort==='salary') jobs.sort((a,b)=>(hasSal(b)?1:0)-(hasSal(a)?1:0)||sortKey(b)-sortKey(a));
+    else jobs.sort((a,b)=>(hasSal(b)?1:0)-(hasSal(a)?1:0)||sortKey(b)-sortKey(a));
+    return jobs;
+  }
+
+  function categorize(){
+    itJobs=[];trJobs=[];supportJobs=[];devopsJobs=[];
+    pagedJobs=getFiltered();
+    pagedJobs.forEach(j=>{
+      if(isTr(j)) trJobs.push(j);
+      else itJobs.push(j);
+      if(isSupport(j)) supportJobs.push(j);
+      if(isDevOps(j)) devopsJobs.push(j);
+    });
+  }
+
+  function scoreRelevance(j,words){
+    if(!words||words.length===0) return 0;
+    const h=[j.title,j.company,j.description,j.location,(j.tags||[]).join(' ')].join(' ').toLowerCase();
+    let score=0;
+    words.forEach(w=>{
+      if(j.title.toLowerCase().indexOf(w)!==-1) score+=5;
+      else if(j.company.toLowerCase().indexOf(w)!==-1) score+=3;
+      else if((j.tags||[]).some(t=>t.toLowerCase().indexOf(w)!==-1)) score+=2;
+      else if(h.indexOf(w)!==-1) score+=1;
+    });
+    return score;
+  }
+
+  function renderSearchResults(jobs,words){
+    const el=document.getElementById('search-results');
+    const grid=document.getElementById('sr-grid');
+    const count=document.getElementById('sr-count');
+    if(!el||!words||words.length===0){el.style.display='none';return}
+    const scored=jobs.map(j=>({job:j,score:scoreRelevance(j,words)})).filter(s=>s.score>0).sort((a,b)=>b.score-a.score).slice(0,8);
+    if(scored.length===0){el.style.display='none';return}
+    el.style.display='block';
+    count.textContent=jobs.length.toLocaleString()+' matching · showing top '+scored.length;
+    grid.innerHTML=scored.map(s=>renderCard(s.job,s.job.subcategory==='translation'||s.job.subcategory==='writing'?'translation':'it')).join('');
+  }
+
+  function renderCol(listEl,countEl,jobs,total,primary){
+    countEl.textContent=total.toLocaleString()+' jobs';
+    if(jobs.length===0){
+      listEl.innerHTML='<div class="state-box"><h3>No jobs on this page</h3><p>Try the next page.</p></div>';
+      return;
+    }
+    listEl.innerHTML=jobs.map(j=>renderCard(j,primary)).join('');
+  }
+
+  function pageSlice(jobs,p){const s=(p-1)*PER_PAGE;return jobs.slice(s,s+PER_PAGE)}
+  function totalPages(a,b){return Math.max(1,Math.ceil(Math.max(a.length,b.length)/PER_PAGE))}
+
+  function renderPag(el,total,page,pair,left,right,ll,rl){
+    if(!el) return;
+    if(total<=1){el.innerHTML='';return}
+    const start=(page-1)*PER_PAGE;
+    const showing=pageSlice(left,page).length+pageSlice(right,page).length;
+    let html='<div class="pair-summary"><strong>'+esc(ll)+' + '+esc(rl)+'</strong> Page '+page+' of '+total+' · '+showing+' shown</div><div class="pair-controls">';
+    html+='<button class="pair-btn" data-pair="'+pair+'" data-page="'+(page-1)+'"'+(page<=1?' disabled':'')+'>‹</button>';
+    const maxB=11;
+    let sP=Math.max(1,page-Math.floor(maxB/2)),eP=sP+maxB-1;
+    if(eP>total){eP=total;sP=Math.max(1,eP-maxB+1)}
+    if(sP>1) html+='<button class="pair-btn" data-pair="'+pair+'" data-page="1">1</button>'+(sP>2?'<span class="pair-ellipsis">…</span>':'');
+    for(let i=sP;i<=eP;i++) html+='<button class="pair-btn'+(i===page?' active':'')+'" data-pair="'+pair+'" data-page="'+i+'">'+i+'</button>';
+    if(eP<total) html+=(eP<total-1?'<span class="pair-ellipsis">…</span>':'')+'<button class="pair-btn" data-pair="'+pair+'" data-page="'+total+'">'+total+'</button>';
+    html+='<button class="pair-btn" data-pair="'+pair+'" data-page="'+(page+1)+'"'+(page>=total?' disabled':'')+'>›</button></div>';
+    el.innerHTML=html;
+  }
+
+  function render(){
+    categorize();
+    const q=searchEl?searchEl.value.trim().toLowerCase():'';
+    const words=q?q.split(/\s+/).filter(Boolean):[];
+    renderSearchResults(pagedJobs,words);
+    const pP=totalPages(itJobs,trJobs), sP=totalPages(supportJobs,devopsJobs);
+    primaryPage=Math.min(primaryPage,pP); secondaryPage=Math.min(secondaryPage,sP);
+    renderCol(itList,itCount,pageSlice(itJobs,primaryPage),itJobs.length,'it');
+    renderCol(trList,trCount,pageSlice(trJobs,primaryPage),trJobs.length,'translation');
+    renderCol(supportList,supportCount,pageSlice(supportJobs,secondaryPage),supportJobs.length,'support');
+    renderCol(devopsList,devopsCount,pageSlice(devopsJobs,secondaryPage),devopsJobs.length,'devops');
+    renderPag(primaryPag,pP,primaryPage,'primary',itJobs,trJobs,'IT / Development','Translation & Writing');
+    renderPag(secondaryPag,sP,secondaryPage,'secondary',supportJobs,devopsJobs,'Support','DevOps');
+    injectJobSchema(pagedJobs);
+  }
+
+  function injectJobSchema(jobs){
+    // Generate Google Jobs JSON-LD schema
+    const visible=jobs.slice(0,12); // First 12 visible jobs
+    const now=new Date().toISOString();
+    const site='https://awesomejobs.online';
+    const schemas=[];
+    visible.forEach(j=>{
+      if(!j.apply_url&&!j.source_url) return;
+      const loc=(j.location||'Remote').split('/')[0].trim().slice(0,50);
+      const schema={
+        '@context':'https://schema.org',
+        '@type':'JobPosting',
+        'title':j.title||'',
+        'description':(j.description||'').slice(0,500),
+        'datePosted':j.date_posted||now,
+        'validThrough':new Date(Date.now()+30*86400000).toISOString(),
+        'employmentType':'FULL_TIME',
+        'hiringOrganization':{
+          '@type':'Organization',
+          'name':j.company||'Remote Company',
+          'sameAs':site
+        },
+        'jobLocation':{
+          '@type':'Place',
+          'address':{'@type':'PostalAddress','addressLocality':loc,'addressCountry':'WORLDWIDE'}
+        },
+        'directApply':true,
+        'url':j.apply_url||j.source_url||site
+      };
+      if(j.salary) schema['baseSalary']={'@type':'MonetaryAmount','currency':'USD','value':{'@type':'QuantitativeValue','value':j.salary,'unitText':'YEAR'}};
+      schemas.push(schema);
+    });
+    if(!schemas.length) return;
+    let el=document.getElementById('json-ld-schema');
+    if(!el){el=document.createElement('script');el.id='json-ld-schema';el.type='application/ld+json';document.head.appendChild(el)}
+    el.textContent=JSON.stringify({'@context':'https://schema.org','@graph':schemas});
+  }
+
+  function renderFeatured(){
+    const paidIt=itJobs.filter(hasSal);
+    const poolIt=paidIt.length?paidIt:itJobs;
+    const featIt=poolIt.length?poolIt[Math.floor(Math.random()*poolIt.length)]:null;
+    const poolTr=[...trJobs].sort(()=>Math.random()-.5);
+    const prev=sessionStorage.getItem('feat_tr')||'';
+    let featTr=poolTr.find(j=>(j.apply_url||'')!==prev)||poolTr[0];
+    if(featTr) sessionStorage.setItem('feat_tr',featTr.apply_url||featTr.title||'');
+    let html='';
+    if(featIt){
+      const tags=(featIt.tags||[]).slice(0,5).map(t=>'<span class="featured-tag">'+esc(t)+'</span>').join('');
+      html+='<div class="featured-card featured-card-it">'+
+        '<div class="featured-type">⭐ Featured IT Job</div>'+
+        '<div class="featured-title">'+esc(featIt.title)+'</div>'+
+        '<div class="featured-company">'+esc(featIt.company||'Remote Company')+'</div>'+
+        '<div class="featured-desc">'+esc((featIt.description||'').replace(/<[^>]+>/g,'').substring(0,200))+'</div>'+
+        (tags?'<div class="featured-tags">'+tags+'</div>':'')+
+        '<div class="featured-meta">📍 '+esc(featIt.location||'Remote')+(featIt.salary?' <span class="featured-salary">'+esc(featIt.salary)+'</span>':'')+'</div>'+
+        '<a class="featured-apply featured-apply-it" href="'+esc(featIt.apply_url)+'" target="_blank" rel="noopener">Apply Now →</a>'+
+      '</div>';
+    }
+    if(featTr){
+      const tags=(featTr.tags||[]).slice(0,5).map(t=>'<span class="featured-tag">'+esc(t)+'</span>').join('');
+      html+='<div class="featured-card featured-card-tr">'+
+        '<div class="featured-type">⭐ Featured Translation</div>'+
+        '<div class="featured-title">'+esc(featTr.title)+'</div>'+
+        '<div class="featured-company">'+esc(featTr.company||'Various Clients')+'</div>'+
+        '<div class="featured-desc">'+esc((featTr.description||'').replace(/<[^>]+>/g,'').substring(0,200))+'</div>'+
+        (tags?'<div class="featured-tags">'+tags+'</div>':'')+
+        '<div class="featured-meta">📍 '+esc(featTr.location||'Remote')+(featTr.salary?' <span class="featured-salary">'+esc(featTr.salary)+'</span>':'')+'</div>'+
+        '<a class="featured-apply featured-apply-tr" href="'+esc(featTr.apply_url)+'" target="_blank" rel="noopener">Apply Now →</a>'+
+      '</div>';
+    }
+    featuredGrid.innerHTML=html;
+  }
+
+  // Load
+  async function load(){
+    try{
+      const res=await fetch('/data/jobs.json?t='+Date.now(),{cache:'no-store'});
+      if(!res.ok) throw new Error('HTTP '+res.status);
+      const data=await res.json();
+      allJobs=Array.isArray(data.jobs)?data.jobs:[];
+      window.__ajCount=allJobs.length;
+    }catch(e){
+      itList.innerHTML='<div class="state-box"><h3>Unable to load jobs</h3><p>'+esc(e.message)+'</p></div>';
+      return;
+    }
+    const text=allJobs.length.toLocaleString()+' Jobs Online';
+    if(liveEl) liveEl.textContent=text;
+    if(heroLive) heroLive.textContent=text;
+    render();
+    renderFeatured();
+  }
+
+  // Pagination clicks
+  document.addEventListener('click',function(e){
+    const btn=e.target.closest('.pair-btn');
+    if(!btn||btn.disabled) return;
+    const p=parseInt(btn.getAttribute('data-page'),10);
+    const pair=btn.getAttribute('data-pair');
+    if(!Number.isFinite(p)) return;
+    if(pair==='secondary') secondaryPage=p;
+    else primaryPage=p;
+    render();
+    const el=document.getElementById(pair==='secondary'?'secondary-grid':'primary-grid');
+    if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+
+  // Search
+  let searchTimer;
+  if(searchEl){
+    searchEl.addEventListener('input',function(){
+      clearTimeout(searchTimer);
+      searchTimer=setTimeout(function(){primaryPage=1;secondaryPage=1;render()},250);
+    });
+    searchEl.addEventListener('keydown',function(e){
+      if(e.key==='Enter'){e.preventDefault();primaryPage=1;secondaryPage=1;render()}
+    });
+  }
+  if(searchGo) searchGo.addEventListener('click',function(){primaryPage=1;secondaryPage=1;render()});
+  if(filterCat) filterCat.addEventListener('change',function(){primaryPage=1;secondaryPage=1;render()});
+  if(filterSort) filterSort.addEventListener('change',function(){primaryPage=1;secondaryPage=1;render()});
+  if(filterReset) filterReset.addEventListener('click',function(){
+    if(searchEl) searchEl.value='';
+    if(filterCat) filterCat.value='all';
+    if(filterSort) filterSort.value='newest';
+    primaryPage=1;secondaryPage=1;
+    render();
+  });
+
+  // Presets
+  document.querySelectorAll('[data-preset]').forEach(b=>{
+    b.addEventListener('click',function(){
+      const p=this.getAttribute('data-preset');
+      if(p==='fresh-dev'&&searchEl) searchEl.value='developer react frontend backend engineer';
+      if(p==='paid-dev'&&searchEl) searchEl.value='developer engineer software';
+      if(p==='sales-crm'&&searchEl) searchEl.value='sales CRM inside sales';
+      if(p==='writing'&&searchEl) searchEl.value='writer content copy editor';
+      if(p==='translation'&&searchEl) searchEl.value='translator translation localization';
+      primaryPage=1;secondaryPage=1;
+      render();
+    });
+  });
+
+  // Theme
+  themeBtn.addEventListener('click',function(){
+    const html=document.documentElement;
+    const cur=html.getAttribute('data-theme');
+    const next=cur==='dark'?'light':'dark';
+    html.setAttribute('data-theme',next);
+    try{localStorage.setItem('aj-theme',next)}catch(e){}
+  });
+
+  // Active nav link based on current path
+  (function(){
+    var path=(location.pathname||'/').split('/').pop()||'';
+    if(!path||path==='index.html') path='/';
+    document.querySelectorAll('.header-nav a').forEach(function(a){
+      var href=a.getAttribute('href');
+      var match=href===path||(path==='/'&&href==='/');
+      a.classList.toggle('active',match);
+    });
+  })();
+
+  // Refresh timer
+  (function(){
+    const ring=document.getElementById('refresh-ring');
+    const time=document.getElementById('refresh-time');
+    if(!ring||!time) return;
+    const iv=15*60*1000;
+    function tick(){
+      const now=Date.now(),elapsed=now%iv,rem=iv-elapsed;
+      const m=Math.floor(rem/60000),s=Math.floor((rem%60000)/1000);
+      const ratio=rem/iv,progress=ratio*100,hue=Math.round((1-ratio)*120);
+      ring.style.setProperty('--refresh-progress',progress.toFixed(2)+'%');
+      ring.style.setProperty('--refresh-color','hsl('+hue+' 78% 52%)');
+      time.textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+    }
+    tick();
+    setInterval(tick,1000);
+  })();
+
+  // Cookie
+  (function(){
+    const bar=document.getElementById('cookie-bar');
+    if(bar&&!localStorage.getItem('aj-cookie')){
+      bar.classList.add('show');
+      document.getElementById('cookie-accept').addEventListener('click',function(){
+        localStorage.setItem('aj-cookie','accepted');
+        bar.classList.remove('show');
+      });
+      document.getElementById('cookie-decline').addEventListener('click',function(){
+        localStorage.setItem('aj-cookie','declined');
+        bar.classList.remove('show');
+      });
+    }
+  })();
+
+  load();
+})();
+</script>
+</body>
+</html>

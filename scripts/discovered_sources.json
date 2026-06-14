@@ -1,0 +1,101 @@
+[
+  {
+    "name": "XebiaLabs",
+    "url": "https://xebialabs.com/careers/",
+    "type": "html",
+    "notes": "IT automation software provider that offers a variety of [Kremote job opportunities, including positions related to translation and lo[2D[Klocalization.",
+    "verified": true,
+    "discovered_at": "2026-06-14T22:13:32.733727",
+    "status": "pending_review"
+  },
+  {
+    "name": "Hacker News",
+    "url": "https://news.ycombinator.com/",
+    "type": "html",
+    "notes": "Community-driven news site featuring articles submitted b[1D[Kby users. DevOps-related jobs can be found in the 'Jobs' section.",
+    "verified": true,
+    "discovered_at": "2026-06-14T22:27:16.313619",
+    "status": "pending_review"
+  },
+  {
+    "name": "Jobify",
+    "url": "https://www.jobify.io/design-jobs/remote/",
+    "type": "api",
+    "notes": "A platform offering remote design jobs with a public API.[4D[KAPI.",
+    "verified": true,
+    "discovered_at": "2026-06-14T22:28:06.772827",
+    "status": "pending_review"
+  },
+  {
+    "name": "Freelancer",
+    "url": "https://www.freelancer.com/",
+    "type": "api",
+    "notes": "Another large freelance platform with a variety of transl[6D[Ktranslation jobs.",
+    "verified": true,
+    "discovered_at": "2026-06-14T22:28:23.523713",
+    "status": "pending_review"
+  },
+  {
+    "name": "Freelancer",
+    "url": "https://www.freelancer.com/",
+    "type": "html",
+    "notes": "The largest freelance platform where users can find and h[1D[Khire remote translators for various projects.",
+    "verified": true,
+    "discovered_at": "2026-06-14T22:28:42.629871",
+    "status": "pending_review"
+  },
+  {
+    "name": "Truelancer",
+    "url": "https://truelancer.com/",
+    "type": "html",
+    "notes": "Another major platform for freelancers, including transla[7D[Ktranslation services.",
+    "verified": true,
+    "discovered_at": "2026-06-14T22:28:44.229901",
+    "status": "pending_review"
+  },
+  {
+    "name": "Sales Force Jobs",
+    "url": "https://www.salesforce.com/careers/",
+    "type": "html",
+    "notes": "Company-specific job board for Salesforce, including remo[4D[Kremote roles in sales.",
+    "verified": true,
+    "discovered_at": "2026-06-14T22:29:52.294682",
+    "status": "pending_review"
+  },
+  {
+    "name": "HubSpot Careers",
+    "url": "https://www.hubspot.com/careers",
+    "type": "api",
+    "notes": "Public API for job listings from HubSpot's various teams,[6D[Kteams, including sales.",
+    "verified": true,
+    "discovered_at": "2026-06-14T22:29:53.152222",
+    "status": "pending_review"
+  },
+  {
+    "name": "Hired",
+    "url": "https://www.hired.com/",
+    "type": "api",
+    "notes": "Job board with an API for recruiters and HR professionals[13D[Kprofessionals.",
+    "verified": true,
+    "discovered_at": "2026-06-14T22:31:15.153786",
+    "status": "pending_review"
+  },
+  {
+    "name": "TestProject",
+    "url": "https://testproject.io/qa-jobs",
+    "type": "html",
+    "notes": "A community-driven site focusing on quality assurance rol[3D[Kroles with listings that can be scraped.",
+    "verified": true,
+    "discovered_at": "2026-06-14T22:31:40.451892",
+    "status": "pending_review"
+  },
+  {
+    "name": "Jobified",
+    "url": "https://jobified.com/jobs",
+    "type": "api",
+    "notes": "Offers a public API for job listings including QA positio[7D[Kpositions, making it easy to integrate into automated scraping solutions.",
+    "verified": true,
+    "discovered_at": "2026-06-14T22:31:41.422340",
+    "status": "pending_review"
+  }
+]

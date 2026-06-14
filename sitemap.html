@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+(function(){try{var t=localStorage.getItem('aj-theme');if(!t) t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Sitemap — AwesomeJobs</title>
+<meta name="description" content="Browse all pages on AwesomeJobs — remote job board with 8,000+ curated listings.">
+<meta name="robots" content="index, follow">
+<style>
+:root{--bg:#f8fafc;--bg-alt:#f1f5f9;--surface:#fff;--text:#0f172a;--text2:#475569;--muted:#94a3b8;--border:#e2e8f0;--accent:#2563eb;--accent-h:#1d4ed8;--accent-glow:rgba(37,99,235,.08);--green:#16a34a;--header-bg:rgba(255,255,255,.85);--shadow:0 1px 2px rgba(0,0,0,.04);--radius:10px;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+[data-theme="dark"]{--bg:#0f172a;--bg-alt:#1e293b;--surface:#1e293b;--text:#e2e8f0;--text2:#94a3b8;--muted:#64748b;--border:#334155;--accent:#3b82f6;--accent-h:#60a5fa;--accent-glow:rgba(59,130,246,.12);--green:#22c55e;--header-bg:rgba(15,23,42,.92);--shadow:hadow:0 1px 2px rgba(0,0,0,.2)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6}
+.site-header{position:sticky;top:0;z-index:100;background:var(--header-bg);backdrop-filter:blur(14px)}
+.header-inner{max-width:1400px;margin:0 auto;padding:0 18px;height:64px;display:flex;align-items:center;gap:6px}
+.logo{display:flex;align-items:center;gap:4px;text-decoration:none}
+.logo img{width:48px;height:38px;object-fit:contain}
+.logo-text{font-size:1.5rem;font-weight:800;color:var(--text);letter-spacing:-.03em}
+.logo-text em{font-style:italic;color:var(--accent);font-weight:400}
+
+/* ── HERO ── */
+.sitemap-hero{background:linear-gradient(135deg,#0a1628,#0f2647);color:#fff;padding:48px 24px;text-align:center}
+.sitemap-hero h1{font-size:2.4rem;font-weight:900;letter-spacing:-.03em;margin-bottom:8px}
+.sitemap-hero p{color:rgba(255,255,255,.7);font-size:1rem}
+
+/* ── GRID ── */
+.sitemap-body{max-width:1200px;margin:0 auto;padding:40px 24px 60px}
+.sitemap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sitemap-card{border-radius:var(--radius);padding:20px;border:1px solid var(--border);background:var(--surface);transition:box-shadow .15s}
+.sitemap-card:hover{box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.sitemap-card .icon{font-size:1.8rem;margin-bottom:8px}
+.sitemap-card h3{font-size:.95rem;font-weight:800;color:var(--text);margin-bottom:4px}
+.sitemap-card p{font-size:.75rem;color:var(--text2);margin-bottom:10px;line-height:1.4}
+.sitemap-card a{display:inline-flex;align-items:center;gap:4px;padding:6px 14px;border-radius:6px;background:var(--accent-glow);color:var(--accent);font-size:.75rem;font-weight:700;text-decoration:none;transition:all .12s}
+.sitemap-card a:hover{background:var(--accent);color:#fff}
+.sitemap-card .count{font-size:.65rem;color:var(--muted);margin-top:8px}
+
+/* ── BLOG SECTION ── */
+.blog-section{margin-top:40px}
+.blog-section h2{font-size:1.3rem;font-weight:800;color:var(--text);margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.blog-card{border-radius:var(--radius);padding:16px;border:1px solid var(--border);background:var(--surface)}
+.blog-card .tag{font-size:.6rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
+.blog-card h4{font-size:.85rem;font-weight:800;color:var(--text);margin-bottom:4px}
+.blog-card a{color:var(--accent);font-size:.75rem;text-decoration:none;font-weight:600}
+.blog-card a:hover{text-decoration:underline}
+
+.site-footer{border-top:1px solid var(--border);background:var(--bg-alt);margin-top:40px}
+.footer-inner{max-width:1400px;margin:0 auto;padding:24px;text-align:center}
+.footer-inner p{font-size:.65rem;color:var(--muted);margin-bottom:4px}
+.footer-inner a{color:var(--accent);text-decoration:none}
+
+@media(max-width:768px){.sitemap-grid,.blog-grid{grid-template-columns:1fr}.sitemap-hero h1{font-size:1.8rem}.sitemap-body{padding:24px 16px 40px}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <img src="/assets/site-logo.png" alt="">
+      <span class="logo-text">Awesome<em>Jobs</em></span>
+    </a>
+  </div>
+</header>
+
+<section class="sitemap-hero">
+  <h1>📋 Sitemap</h1>
+  <p>All pages on AwesomeJobs — find what you're looking for.</p>
+</section>
+
+<main class="sitemap-body">
+
+  <div class="sitemap-grid">
+    <div class="sitemap-card">
+      <div class="icon">🏠</div>
+      <h3>Home — All Jobs</h3>
+      <p>Browse all 8,000+ remote jobs across every category. Updated every 15 minutes.</p>
+      <a href="/">Browse Jobs →</a>
+    </div>
+
+    <div class="sitemap-card">
+      <div class="icon">💻</div>
+      <h3>Developer Jobs</h3>
+      <p>Software engineering, frontend, backend, full-stack, and more.</p>
+      <a href="/remote-developer-jobs.html">View Jobs →</a>
+    </div>
+
+    <div class="sitemap-card">
+      <div class="icon">☁️</div>
+      <h3>DevOps Jobs</h3>
+      <p>Cloud infrastructure, SRE, platform engineering roles.</p>
+      <a href="/remote-devops-jobs.html">View Jobs →</a>
+    </div>
+
+    <div class="sitemap-card">
+      <div class="icon">📊</div>
+      <h3>Data Jobs</h3>
+      <p>Data science, analytics, machine learning positions.</p>
+      <a href="/remote-data-jobs.html">View Jobs →</a>
+    </div>
+
+    <div class="sitemap-card">
+      <div class="icon">🎨</div>
+      <h3>Design Jobs</h3>
+      <p>UI/UX, graphic design, product design roles.</p>
+      <a href="/remote-design-jobs.html">View Jobs →</a>
+    </div>
+
+    <div class="sitemap-card">
+      <div class="icon">🌍</div>
+      <h3>Translation Jobs</h3>
+      <p>Localization, interpreting, transcription positions.</p>
+      <a href="/remote-translation-jobs.html">View Jobs →</a>
+    </div>
+
+    <div class="sitemap-card">
+      <div class="icon">✍️</div>
+      <h3>Writing Jobs</h3>
+      <p>Content writing, copywriting, technical writing.</p>
+      <a href="/remote-writing-jobs.html">View Jobs →</a>
+    </div>
+
+    <div class="sitemap-card">
+      <div class="icon">📈</div>
+      <h3>Marketing Jobs</h3>
+      <p>SEO, growth marketing, social media, brand roles.</p>
+      <a href="/remote-marketing-jobs.html">View Jobs →</a>
+    </div>
+
+    <div class="sitemap-card">
+      <div class="icon">🤝</div>
+      <h3>Sales Jobs</h3>
+      <p>B2B sales, account management, SaaS sales positions.</p>
+      <a href="/remote-sales-jobs.html">View Jobs →</a>
+    </div>
+
+    <div class="sitemap-card">
+      <div class="icon">🎧</div>
+      <h3>Support Jobs</h3>
+      <p>Customer success, help desk, technical support roles.</p>
+      <a href="/remote-support-jobs.html">View Jobs →</a>
+    </div>
+
+    <div class="sitemap-card">
+      <div class="icon">💰</div>
+      <h3>Finance Jobs</h3>
+      <p>Accounting, financial analysis, bookkeeping positions.</p>
+      <a href="/remote-finance-jobs.html">View Jobs →</a>
+    </div>
+
+    <div class="sitemap-card">
+      <div class="icon">👥</div>
+      <h3>HR Jobs</h3>
+      <p>Talent acquisition, people operations, HR management.</p>
+      <a href="/remote-hr-jobs.html">View Jobs →</a>
+    </div>
+
+    <div class="sitemap-card">
+      <div class="icon">✅</div>
+      <h3>QA Jobs</h3>
+      <p>Software testing, quality assurance, test automation.</p>
+      <a href="/remote-qa-jobs.html">View Jobs →</a>
+    </div>
+
+    <div class="sitemap-card">
+      <div class="icon">📄</div>
+      <h3>About</h3>
+      <p>About AwesomeJobs — how it works, data sources, and contact.</p>
+      <a href="/about.html">About →</a>
+    </div>
+  </div>
+
+  <section class="blog-section">
+    <h2>📝 Guides & Resources</h2>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <div class="tag">Developer Guide</div>
+        <h4>Top 10 Remote Developer Jobs in 2026</h4>
+        <a href="/blog-remote-developer-jobs.html">Read →</a>
+      </div>
+      <div class="blog-card">
+        <div class="tag">Career Guide</div>
+        <h4>How to Land a Remote Job from Anywhere</h4>
+        <a href="/blog-land-remote-job.html">Read →</a>
+      </div>
+      <div class="blog-card">
+        <div class="tag">Salary Guide</div>
+        <h4>Highest Paying Remote Jobs Right Now</h4>
+        <a href="/blog-highest-paying-remote-jobs.html">Read →</a>
+      </div>
+      <div class="blog-card">
+        <div class="tag">Productivity Guide</div>
+        <h4>Remote Work Guide: Tools & Tips for Success</h4>
+        <a href="/blog-remote-work-tools.html">Read →</a>
+      </div>
+      <div class="blog-card">
+        <div class="tag">Company Guide</div>
+        <h4>Best Companies Hiring Remotely in 2026</h4>
+        <a href="/blog-best-remote-companies.html">Read →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2026 <a href="/">AwesomeJobs.online</a> — Remote job board.</p>
+    <p><a href="/">Jobs</a> · <a href="/about.html">About</a> · <a href="/sitemap.xml">XML Sitemap</a></p>
+  </div>
+</footer>
+</body>
+</html>

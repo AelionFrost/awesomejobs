@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Pipeline Monitor</title>
+<meta http-equiv="refresh" content="10">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0f172a;color:#e2e8f0;padding:20px;min-height:100vh}
+h1{font-size:1.2rem;font-weight:800;color:#fff;display:flex;align-items:center;gap:8px}
+.sub{color:#64748b;font-size:.7rem;margin-bottom:16px}
+
+.machine-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.machine{border-radius:12px;padding:16px;border:1px solid #334155}
+.mac{background:linear-gradient(135deg,#1e1b4b,#312e81)}
+.debian{background:linear-gradient(135deg,#0f172a,#1e293b)}
+.machine h2{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.machine h2 span{opacity:.6}
+.stats-row{display:flex;gap:12px;flex-wrap:wrap}
+.stat{background:rgba(0,0,0,.3);border-radius:8px;padding:8px 12px;text-align:center;min-width:70px}
+.stat .val{font-size:1.1rem;font-weight:800}
+.stat .lbl{font-size:.55rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.04em}
+
+.grid-2{display:grid;grid-template-columns:2fr 1fr;gap:12px;margin-bottom:16px}
+.panel{background:#1e293b;border-radius:12px;padding:14px;border:1px solid #334155}
+.panel h3{font-size:.65rem;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+
+.log{font-family:monospace;font-size:.55rem;line-height:1.5;white-space:pre-wrap;max-height:200px;overflow-y:auto;padding:2px}
+.log .ok{color:#22c55e}
+.log .fail{color:#ef4444}
+.log .info{color:#60a5fa}
+.log .llm{color:#a78bfa}
+
+table{width:100%;border-collapse:collapse;font-size:.65rem}
+td{padding:3px 6px;border-bottom:1px solid #0f172a}
+td:first-child{color:#94a3b8}
+td.num{text-align:right;font-weight:700;color:#e2e8f0}
+.bar-bg{height:4px;background:#0f172a;border-radius:2px;overflow:hidden}
+.bar{height:100%;background:#3b82f6;border-radius:2px}
+
+.footer{text-align:center;color:#334155;font-size:.55rem;margin-top:16px}
+</style>
+</head>
+<body>
+<h1>📊 Pipeline Monitor</h1>
+<p class="sub">Updated: 23:12:12 · Auto-refresh 10s</p>
+
+<div class="machine-grid">
+  <div class="machine mac">
+    <h2>🍎 Mac Mini <span>— M4, 16GB</span></h2>
+    <div class="stats-row">
+      <div class="stat"><div class="val">🟢 Running</div><div class="lbl">Ollama</div></div>
+      <div class="stat"><div class="val" style="color:#22c55e">32%</div><div class="lbl">RAM Used</div></div>
+      <div class="stat"><div class="val">1</div><div class="lbl">Hermes</div></div>
+      <div class="stat"><div class="val">12</div><div class="lbl">Browser</div></div>
+    </div>
+    <div class="log" style="margin-top:8px;max-height:60px;font-size:.5rem">/Applications/Ollama.app/Contents/Resources/llama-server (32.4%)</div>
+  </div>
+
+  <div class="machine debian">
+    <h2>🐧 Debian Box <span>— 15GB RAM</span></h2>
+    <div class="stats-row">
+      <div class="stat"><div class="val" style="color:#22c55e">🟢 Running</div><div class="lbl">Pipeline</div></div>
+      <div class="stat"><div class="val" style="color:#22c55e">11016</div><div class="lbl">Jobs</div></div>
+      <div class="stat"><div class="val">1.2Gi/15Gi</div><div class="lbl">RAM</div></div>
+      <div class="stat"><div class="val">1</div><div class="lbl">Ollama</div></div>
+    </div>
+    <div class="log" style="margin-top:8px;max-height:60px;font-size:.5rem;color:#475569">*/15 * * * * /home/aelion/awesomejobs/scripts/safe_pipeline.sh</div>
+  </div>
+</div>
+
+<div class="grid-2">
+  <div class="panel">
+    <h3>📄 Debian Pipeline Log</h3>
+    <div class="log">languageline: 6
+   thebigword: 4
+   propio: 3
+   keywords: 2
+   appen: 1
+<span class="info">Step 2/6: fetching current Mac jobs database</span>
+<span class="info">Step 3/6: merging scraped jobs with current database</span>
+Merged: 11016 existing + 0 new = 11016 total
+New jobs added this run: 0 (11016 -> 11016)
+<span class="info">Step 4/7: local LLM staged review</span>
+<span class="llm">LLM stages: selected 1 of 11009 pending jobs (stage1=qwen2.5:14b, stage2=qwen2.5:14b-64k, stage3=qwen2.5:14b)</span>
+<span class="llm">  LLM job 1/1: Japanese SRT Creation</span>
+<span class="fail">    stage3 skipped: LLM job timed out</span>
+<span class="llm">LLM stages done in 180.5s</span>
+<span class="info">Step 5/7: validating merged jobs database</span>
+<span class="ok">validated 11,016 jobs</span>
+<span class="info">Step 6/7: backing up and publishing data</span>
+<span class="info">Step 7/7: deploy handoff</span>
+<span class="fail">No new jobs; data file copied to Mac, deploy skipped.</span>
+<span class="ok">=== 20260614T200001Z: pipeline done ===</span>
+</div>
+  </div>
+  <div class="panel">
+    <h3>📊 Sources</h3>
+    <table>
+          <tr><td>greenhouse</td><td><div class="bar-bg"><div class="bar" style="width:82%"></div></div></td><td class="num">8248</td></tr>
+          <tr><td>arbeitnow</td><td><div class="bar-bg"><div class="bar" style="width:7%"></div></div></td><td class="num">730</td></tr>
+          <tr><td>lever</td><td><div class="bar-bg"><div class="bar" style="width:3%"></div></div></td><td class="num">363</td></tr>
+          <tr><td>remoteok</td><td><div class="bar-bg"><div class="bar" style="width:3%"></div></div></td><td class="num">304</td></tr>
+          <tr><td>proz</td><td><div class="bar-bg"><div class="bar" style="width:2%"></div></div></td><td class="num">297</td></tr>
+          <tr><td>weworkremotely</td><td><div class="bar-bg"><div class="bar" style="width:1%"></div></div></td><td class="num">101</td></tr>
+          <tr><td>freelancer</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">77</td></tr>
+          <tr><td>dribbble</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">65</td></tr>
+          <tr><td>working-translation</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">46</td></tr>
+          <tr><td>working-sales</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">46</td></tr>
+          <tr><td>working-hr</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">46</td></tr>
+          <tr><td>working-qa</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">46</td></tr>
+          <tr><td>working-devops</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">46</td></tr>
+          <tr><td>working-data-science</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">46</td></tr>
+          <tr><td>working-finance</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">46</td></tr>
+          <tr><td>working-customer-support</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">46</td></tr>
+          <tr><td>working-writing</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">46</td></tr>
+          <tr><td>working-marketing</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">46</td></tr>
+          <tr><td>working-design</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">46</td></tr>
+          <tr><td>working-development</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">46</td></tr>
+          <tr><td>remotive</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">33</td></tr>
+          <tr><td>rws</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">29</td></tr>
+          <tr><td>weweremotely-design</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">27</td></tr>
+          <tr><td>weweremotely</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">26</td></tr>
+          <tr><td>weweremotely-product</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">24</td></tr>
+          <tr><td>appen</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">13</td></tr>
+          <tr><td>transperfect</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">13</td></tr>
+          <tr><td>languageline</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">12</td></tr>
+          <tr><td>translated</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">11</td></tr>
+          <tr><td>propio</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">8</td></tr>
+          <tr><td>hn-hiring</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">8</td></tr>
+          <tr><td>acolad</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">7</td></tr>
+          <tr><td>doist</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">7</td></tr>
+          <tr><td>llm-tomedes</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">7</td></tr>
+          <tr><td>keywords</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">6</td></tr>
+          <tr><td>llm-toggl</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">6</td></tr>
+          <tr><td>llm-smartling</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">6</td></tr>
+          <tr><td>thebigword</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">5</td></tr>
+          <tr><td>llm-remote-ok</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">5</td></tr>
+          <tr><td>llm-doist</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">4</td></tr>
+          <tr><td>llm-basecamp</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">4</td></tr>
+          <tr><td>scaleai</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">3</td></tr>
+          <tr><td>scale-ai</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">3</td></tr>
+          <tr><td>llm-behance</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">3</td></tr>
+          <tr><td>dataannotation</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">2</td></tr>
+          <tr><td>tomedes</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">2</td></tr>
+          <tr><td>llm-automattic</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">2</td></tr>
+          <tr><td>peopleperhour</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">1</td></tr>
+          <tr><td>oneforma</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">1</td></tr>
+          <tr><td>centific</td><td><div class="bar-bg"><div class="bar" style="width:0%"></div></div></td><td class="num">1</td></tr></table>
+  </div>
+</div>
+
+<p class="footer">Mac: scraper every 10 min · Source discovery every 10 min · Debian: main scraper every 15 min</p>
+</body>
+</html>
