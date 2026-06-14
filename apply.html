@@ -69,7 +69,6 @@ function render(job){
   document.getElementById('app').innerHTML=
     '<a class="back" href="javascript:history.back()">← Back to jobs</a>'+
     '<div class="header-block">'+
-    (job._company_logo?'<img src="'+esc(job._company_logo)+'" style="width:48px;height:48px;border-radius:8px;object-fit:contain;margin-bottom:8px;background:var(--surface);padding:4px" alt="">':'')+
     '<h1>'+esc(job.title)+'</h1>'+
     '<p class="company">'+esc(job.company||'Company')+'</p>'+
     '<div class="pills">'+pills+'</div>'+
