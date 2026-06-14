@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>AwesomeJobs Blog - Remote Work Guides</title>
+  <link>https://awesomejobs.online/blog</link>
+  <description>Remote work guides, salary reports, and career tips for finding remote jobs.</description>
+  <language>en-us</language>
+  <lastBuildDate>Sat, 14 Jun 2026 22:00:00 GMT</lastBuildDate>
+  <atom:link href="https://awesomejobs.online/rss.xml" rel="self" type="application/rss+xml"/>
+  
+  <item>
+    <title>Highest Paying Remote Jobs Right Now</title>
+    <link>https://awesomejobs.online/blog-highest-paying-remote-jobs.html</link>
+    <description>Discover which remote roles offer the best compensation in 2026.</description>
+    <pubDate>Sat, 14 Jun 2026 20:00:00 GMT</pubDate>
+    <guid>https://awesomejobs.online/blog-highest-paying-remote-jobs.html</guid>
+  </item>
+  
+  <item>
+    <title>Top 10 Remote Developer Jobs in 2026</title>
+    <link>https://awesomejobs.online/blog-remote-developer-jobs.html</link>
+    <description>From frontend to AI engineering - the most in-demand remote dev roles.</description>
+    <pubDate>Sat, 14 Jun 2026 18:00:00 GMT</pubDate>
+    <guid>https://awesomejobs.online/blog-remote-developer-jobs.html</guid>
+  </item>
+  
+  <item>
+    <title>How to Land a Remote Job from Anywhere</title>
+    <link>https://awesomejobs.online/blog-land-remote-job.html</link>
+    <description>Practical strategies for finding and securing a remote position in 2026.</description>
+    <pubDate>Sat, 14 Jun 2026 16:00:00 GMT</pubDate>
+    <guid>https://awesomejobs.online/blog-land-remote-job.html</guid>
+  </item>
+  
+  <item>
+    <title>Remote Work Guide: Tools &amp; Tips for Success</title>
+    <link>https://awesomejobs.online/blog-remote-work-tools.html</link>
+    <description>The essential toolkit for thriving as a remote worker.</description>
+    <pubDate>Sat, 14 Jun 2026 14:00:00 GMT</pubDate>
+    <guid>https://awesomejobs.online/blog-remote-work-tools.html</guid>
+  </item>
+  
+  <item>
+    <title>Best Companies Hiring Remotely in 2026</title>
+    <link>https://awesomejobs.online/blog-best-remote-companies.html</link>
+    <description>The companies leading the remote work revolution.</description>
+    <pubDate>Sat, 14 Jun 2026 12:00:00 GMT</pubDate>
+    <guid>https://awesomejobs.online/blog-best-remote-companies.html</guid>
+  </item>
+</channel>
+</rss>
