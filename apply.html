@@ -4,133 +4,101 @@
 <script>(function(){try{var t=localStorage.getItem('aj-theme');if(!t) t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Apply — AwesomeJobs</title>
-<meta name="robots" content="noindex">
+<title>Job Detail — AwesomeJobs</title>
 <style>
-:root{--bg:#f8fafc;--bg-alt:#f1f5f9;--text:#0f172a;--text2:#475569;--muted:#94a3b8;--border:#e2e8f0;--accent:#2563eb;--radius:10px;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
-[data-theme="dark"]{--bg:#0f172a;--bg-alt:#1e293b;--text:#e2e8f0;--text2:#94a3b8;--muted:#64748b;--border:#334155;--accent:#3b82f6}
+:root{--bg:#f8fafc;--bg-alt:#f1f5f9;--surface:#fff;--text:#0f172a;--text2:#475569;--muted:#94a3b8;--border:#e2e8f0;--accent:#2563eb;--radius:10px;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+[data-theme="dark"]{--bg:#0f172a;--bg-alt:#1e293b;--surface:#1e293b;--text:#e2e8f0;--text2:#94a3b8;--muted:#64748b;--border:#334155;--accent:#3b82f6}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6}
-.site-header{position:sticky;top:0;z-index:100;background:rgba(248,250,252,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
-[data-theme="dark"] .site-header{background:rgba(15,23,42,.92)}
-.header-inner{max-width:1400px;margin:0 auto;padding:0 18px;height:64px;display:flex;align-items:center;gap:6px}
-.logo{display:flex;align-items:center;gap:4px;text-decoration:none}
-.logo img{width:80px;height:64px;object-fit:contain}
-.logo-text{font-size:2rem;font-weight:800;color:var(--text);letter-spacing:-.03em}
-.logo-text em{font-style:italic;color:var(--accent);font-weight:400}
-.content{max-width:1400px;margin:0 auto;padding:32px 24px 48px}
-a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
-.back{font-size:.78rem;color:var(--muted);display:inline-block;margin-bottom:16px}
-.header-block{max-width:900px;margin:0 auto 16px}
-h1{font-size:1.8rem;font-weight:900;letter-spacing:-.03em;margin:0 0 4px;line-height:1.1}
-.company{font-size:1rem;font-weight:700;color:var(--text2);margin-bottom:8px}
-.pills{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
-.pill{display:inline-block;padding:3px 10px;border-radius:5px;font-size:.7rem;font-weight:700}
-.pill.sal{background:var(--accent);color:#fff}
-.pill.loc{color:var(--text2);background:var(--bg-alt)}
-.pill.nosal{background:#dc2626;color:#fff}
-.salary-badge{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;background:#ecfdf5;color:#059669;font-size:.82rem;font-weight:700;margin-bottom:6px}
-.section-block{background:var(--bg-alt);border-radius:var(--radius);padding:20px 18px;margin:0 auto 10px;max-width:900px;border:1px solid var(--border)}
-.section-block li:nth-child(n+6){display:none}
-h2{font-size:1.3rem;font-weight:900;letter-spacing:.04em;margin:36px 0 8px}
-h2:before{content:'';display:inline-block;width:4px;height:20px;background:var(--accent);border-radius:2px;margin-right:10px;vertical-align:middle;position:relative;top:-1px}
-p,li{font-size:.92rem;color:var(--text2);line-height:1.45;margin:0 0 2px}
-ul{padding-left:18px;margin:0 0 10px}
-li{margin-bottom:1px}
-.apply{margin-top:20px;padding-top:12px;border-top:3px solid var(--accent);max-width:900px;margin-left:auto;margin-right:auto}
-.apply a{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border-radius:8px;background:var(--accent);color:#fff;font-size:.73rem;font-weight:800}
-.apply a:hover{opacity:.92;text-decoration:none}
-.apply .note{font-size:.68rem;color:var(--muted);margin-top:6px}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.5}
+.content{max-width:1400px;margin:0 auto;padding:40px 24px;display:flex;flex-direction:column;align-items:center}
+.back{align-self:flex-start;font-size:.78rem;color:var(--muted);text-decoration:none;margin-bottom:20px}
+.back:hover{color:var(--accent)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:36px;max-width:700px;width:100%;position:relative;overflow:hidden}
+.card::after{content:'';position:absolute;top:0;right:0;width:48px;height:48px;background:var(--accent);clip-path:polygon(0 0,100% 0,100% 100%)}
+.card h1{font-size:1.35rem;font-weight:900;margin:0 40px 4px 0;line-height:1.2}
+.card .co{font-size:.85rem;font-weight:700;color:var(--text2);margin-bottom:12px}
+.card .tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px}
+.card .tag{display:inline-block;padding:3px 10px;border-radius:6px;font-size:.68rem;font-weight:700}
+.tag.sal{background:var(--accent);color:#fff}
+.tag.loc{color:var(--text2);background:var(--bg-alt)}
+.tag.nosal{background:#dc2626;color:#fff}
+.card .desc{font-size:.92rem;color:var(--text2);line-height:1.7;margin-bottom:24px}
+.card .desc h3{font-size:.8rem;font-weight:400;letter-spacing:.02em;color:var(--text2);margin:18px 0 4px}
+.card .desc p{margin-bottom:6px}
+.apply-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:16px 40px;border-radius:8px;background:var(--accent);color:#fff;font-size:.95rem;font-weight:800;text-decoration:none;transition:opacity .12s;width:100%}
+.card .apply:hover{opacity:.9}
+.site-footer{border-top:1px solid var(--border);margin-top:60px;padding:24px;text-align:center;font-size:.65rem;color:var(--muted);max-width:1400px;margin-left:auto;margin-right:auto}
+.site-footer a{color:var(--accent)}
 .loading{color:var(--muted)}
-.site-footer{border-top:1px solid var(--border);background:var(--bg-alt)}
-.footer-inner{max-width:1400px;margin:0 auto;padding:24px;text-align:center}
-.footer-inner p{font-size:.65rem;color:var(--muted)}.footer-inner a{color:var(--accent)}
-@media(max-width:768px){.content{padding:20px 14px 32px}h1{font-size:1.4rem}h2{font-size:1.1rem}}
 </style>
 </head>
 <body>
-<header class="site-header"><div class="header-inner"><a href="/" class="logo"><img src="/assets/site-logo.png" alt=""><span class="logo-text">Awesome<em>Jobs</em></span></a></div></header>
 <main class="content" id="app"><p class="loading">Loading...</p></main>
-<footer class="site-footer"><div class="footer-inner"><p>© 2026 <a href="/">AwesomeJobs.online</a></p></div></footer>
+<footer class="site-footer">© 2026 <a href="/">AwesomeJobs.online</a></footer>
 <script>
 function esc(s){var d=document.createElement('div');d.textContent=s||'';return d.innerHTML}
 var hash=window.location.hash.slice(1);
-if(!hash){document.getElementById('app').innerHTML='<a class="back" href="/">← Back</a><p>No job specified.</p>'}
-else fetch('/data/jobs.json?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){render(d.jobs[parseInt(hash)])}).catch(function(){document.getElementById('app').innerHTML='<p>Failed to load.</p>'});
+if(!hash){app.innerHTML='<a class="back" href="/">← Back</a><p>No job.</p>'}
+else fetch('/data/jobs.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(d=>render(d.jobs[parseInt(hash)])).catch(function(){app.innerHTML='<p>Failed.</p>'});
 
 function render(job){
-  if(!job){document.getElementById('app').innerHTML='<a class="back" href="/">← Back</a><p>Job not found.</p>';return}
+  if(!job){app.innerHTML='<a class="back" href="/">← Back</a><p>Not found.</p>';return}
   document.title=job.title+' — AwesomeJobs';
   var url=job.apply_url||job.source_url||'#';
-  var pills='';
-  if(job.location)pills+='<span class="pill loc">'+esc(job.location)+'</span>';
-  if(job.salary)pills+='<span class="pill sal">'+esc(job.salary)+'</span>';
-  else pills+='<span class="pill nosal">Salary not listed</span>';
-  document.getElementById('app').innerHTML=
-    '<a class="back" href="javascript:history.back()">← Back to jobs</a>'+
-    '<div class="header-block">'+
-    '<h1>'+esc(job.title)+'</h1>'+
-    '<p class="company">'+esc(job.company||'Company')+'</p>'+
-    '<div class="pills">'+pills+'</div>'+
-    '</div>'+
-    '<div id="detail"><p class="loading">Loading full details...</p></div>'+
-    '<div class="apply"><a href="'+esc(url)+'" target="_blank" rel="noopener">Apply for this position →</a><p class="note">Redirects to employer page</p></div>';
+  var tags='';
+  if(job.location)tags+='<span class="tag loc">'+esc(job.location)+'</span>';
+  if(job.salary)tags+='<span class="tag sal">'+esc(job.salary)+'</span>';
+  else tags+='<span class="tag nosal">Salary not listed</span>';
+  if(job.source)tags+='<span class="tag loc">via '+esc(job.source)+'</span>';
+
+  var extra='';
+  if(job.description){
+    extra+='<h3>Description</h3><p>'+esc(job.description)+'</p>';
+  }
+  var info=[];
+  if(job._company_industry)info.push(job._company_industry);
+  if(job._company_size)info.push(job._company_size);
+  if(job._company_founded)info.push('Founded '+job._company_founded);
+  if(info.length)extra+='<h3>Company</h3><p>'+esc(info.join(' · '))+'</p>';
+  if(job._company_about)extra+='<h3>About</h3><p>'+esc(job._company_about)+'</p>';
+
+  app.innerHTML=
+    '<a class="back" href="javascript:history.back()">← Back</a>'+
+    '<div class="card">'+
+      '<h1>'+esc(job.title)+'</h1>'+
+      '<p class="co">'+esc(job.company||'Company')+'</p>'+
+      '<div class="tags">'+tags+'</div>'+
+      '<div class="desc">'+extra+'</div>'+
+      '<div class="desc" id="more">Loading details...</div>'+
+      '<a class="apply" href="'+esc(url)+'" target="_blank" rel="noopener">Apply →</a>'+
+      '<p style="font-size:.68rem;color:var(--muted);margin-top:8px">You will be redirected to the company\'s website</p>'+
+    '</div>';
+
+  // Fetch listing text via proxy
   if(url&&url!=='#'){
-    fetch('http://127.0.0.1:8910/fetch?url='+encodeURIComponent(url)).then(function(r){return r.json()}).then(function(d){
-      if(d.text&&d.text.length>50)document.getElementById('detail').innerHTML=fmt(d.text,job);
+    fetch('http://127.0.0.1:8910/fetch?url='+encodeURIComponent(url)).then(r=>r.json()).then(function(d){
+      var more=document.getElementById('more');
+      if(!more||!d.text||d.text.length<50) return;
+      var lines=d.text.split('\n').filter(function(l){return l.trim().length>20});
+      // Find interesting sections: Responsibilities, Requirements, Benefits
+      var out='',found=0;
+      for(var i=0;i<lines.length;i++){
+        var l=lines[i].trim();
+        if(/^(Responsibilities|Requirements|Qualifications|Benefits|Perks)/i.test(l)){
+          out+='<h3>'+l.replace(/:$/,'')+'</h3>';
+          found++;
+        }else if(found>0&&l.length>15){
+          // Max 3 sentences per line
+          var sents=l.split(/\.(?=\s+[A-Z])/);
+          var txt=sents.slice(0,3).join('.')+(sents.length>3?'.':'');
+          out+='<p style="font-size:.92rem;color:var(--text2)">• '+esc(txt)+'</p>';
+        }
+      }
+      if(out)more.innerHTML=out;
+      else more.innerHTML='';
     }).catch(function(){});
   }
 }
-
-function fmt(text,job){
-  var lines=text.split('\n').map(function(l){return l.trim()}).filter(function(l){return l.length>5});
-  lines=lines.filter(function(l){return !/^(Job Application for|Back to jobs|Machine Learning|Pay Transparency|This job posting|In addition to base|In select roles|During the interview|First Name|Last Name|Preferred|Email|Phone|Location|Resume|Cover Letter|LinkedIn|How did you|Are you|Do you|By selecting|Briefly describe|Reddit U.S.|What gender|Please select|Submit application)/i.test(l)});
-  var secHead=/^(Responsibilities|Requirements|Qualifications|Required qualifications|What you|Benefits|Perks|Perks and Benefits|About|Role|Candidate Profile|Who you are|What we)/i;
-  var skip=/^Team overview:?\s*$/i;
-  var blocks=[],cur='',inL=false,inP=false;
-  for(var i=0;i<lines.length;i++){
-    var l=lines[i];
-    if(skip.test(l))continue;
-    // Check if line STARTS with a section header (possibly followed by text)
-    var secMatch=l.match(secHead);
-    if(secMatch){
-      if(cur){if(inL)cur+='</ul>';if(inP)cur+='</p>';blocks.push(cur);}
-      cur='<h2>'+secMatch[0]+'</h2>';inL=false;inP=false;
-      // If there's text after the colon, add it
-      var rest=l.substring(secMatch[0].length).replace(/^:?\s*/,'');
-      if(rest.length>10){
-        if(!inP){cur+='<p class=\"trunc\">';inP=true}
-        cur+=rest;
-      }
-      continue;
-  } else if(l.match(/^[-•]\s/)||l.match(/^[A-Z][a-z].*:$/)){
-      if(inP){cur+='</p>';inP=false}
-      if(!inL){cur+='<ul>';inL=true}
-      cur+='<li>'+l.replace(/^[-•]\s*/,'').replace(/:$/,'')+'</li>';
-    }else{
-      if(inL){cur+='</ul>';inL=false}
-      if(!inP){cur+='<p class=\"trunc\">';inP=true}
-      else cur+=' ';
-      cur+=l;
-    }
-  }
-  if(inL)cur+='</ul>';
-  if(inP)cur+='</p>';
-  if(cur)blocks.push(cur);
-  if(job.description)blocks.unshift('<h2>Description</h2><p class="trunc">'+esc(job.description)+'</p>');
-  if(job._company_about)blocks.unshift('<h2>About '+esc(job.company)+'</h2><p class="trunc">'+esc(job._company_about)+'</p>');
-  return blocks.map(function(b){return '<div class="section-block">'+b+'</div>'}).join('')||'<p style="color:var(--muted)">Visit apply link for full details.</p>';
-}
-
-// Trim paragraphs to 3 sentences max
-setTimeout(function(){
-  document.querySelectorAll('.trunc').forEach(function(p){
-    var sentences = p.textContent.split(/\.(?=\s+[A-Z])/);
-    if(sentences.length > 3){
-      p.textContent = sentences.slice(0,3).join('.')+'.';
-    }
-  });
-},200);
 </script>
 </body>
 </html>
