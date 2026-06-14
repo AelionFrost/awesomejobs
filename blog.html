@@ -1,149 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>
-(function(){try{var t=localStorage.getItem('aj-theme');if(!t) t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
-</script>
+<script>(function(){try{var t=localStorage.getItem('aj-theme');if(!t) t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Blog — Remote Work Guides & Resources — AwesomeJobs</title>
-<meta name="description" content="Remote work guides, salary reports, career tips, and resources for finding remote jobs. Updated regularly.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://awesomejobs.online/blog">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://awesomejobs.online/blog">
-<meta property="og:title" content="Blog — Remote Work Guides">
-<meta property="og:description" content="Remote work guides, salary reports, and career tips.">
-<meta property="og:image" content="https://awesomejobs.online/assets/site-logo.png">
+<title>Blog — Remote Work Guides</title>
+<meta name="description" content="Remote work guides, salary reports, career tips.">
 <style>
-:root{--bg:#f8fafc;--bg-alt:#f1f5f9;--surface:#fff;--text:#0f172a;--text2:#475569;--muted:#94a3b8;--border:#e2e8f0;--accent:#2563eb;--accent-h:#1d4ed8;--accent-glow:rgba(37,99,235,.08);--green:#16a34a;--header-bg:rgba(255,255,255,.85);--shadow:0 1px 2px rgba(0,0,0,.04);--radius:10px;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
-[data-theme="dark"]{--bg:#0f172a;--bg-alt:#1e293b;--surface:#1e293b;--text:#e2e8f0;--text2:#94a3b8;--muted:#64748b;--border:#334155;--accent:#3b82f6;--accent-h:#60a5fa;--accent-glow:rgba(59,130,246,.12);--green:#22c55e;--header-bg:rgba(15,23,42,.92);--shadow:0 1px 2px rgba(0,0,0,.2)}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6}
-.site-header{position:sticky;top:0;z-index:100;background:var(--header-bg);backdrop-filter:blur(14px)}
-.header-inner{max-width:1400px;margin:0 auto;padding:0 18px;height:64px;display:flex;align-items:center;gap:6px}
-.logo{display:flex;align-items:center;gap:4px;text-decoration:none}
-.logo img{width:48px;height:38px;object-fit:contain}
-.logo-text{font-size:1.5rem;font-weight:800;color:var(--text);letter-spacing:-.03em}
-.logo-text em{font-style:italic;color:var(--accent);font-weight:400}
+:root{--bg:#f8fafc;--surface:#fff;--text:#0f172a;--text2:#475569;--muted:#94a3b8;--border:#e2e8f0;--accent:#2563eb;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+[data-theme="dark"]{--bg:#0f172a;--surface:#1e293b;--text:#e2e8f0;--text2:#94a3b8;--muted:#64748b;--border:#334155;--accent:#3b82f6}
+body{font-family:var(--font);background:var(--bg);color:var(--text);margin:0;padding:40px 24px;max-width:1100px;margin:0 auto}
+a{text-decoration:none}
 
-.blog-hero{background:linear-gradient(135deg,#0a1628,#0f2647,#1a365d);color:#fff;padding:60px 24px;text-align:center}
-.blog-hero h1{font-size:clamp(2rem,4vw,3rem);font-weight:900;letter-spacing:-.03em;margin-bottom:12px}
-.blog-hero p{color:rgba(255,255,255,.7);font-size:1.05rem;max-width:500px;margin:0 auto}
+.back{display:inline-flex;align-items:center;gap:5px;font-size:.78rem;color:var(--muted);margin-bottom:24px}
+.back:hover{color:var(--accent)}
 
-.blog-body{max-width:1200px;margin:0 auto;padding:40px 24px 60px}
-.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:40px}
-.blog-card{border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);background:var(--surface);transition:box-shadow .15s,transform .12s}
-.blog-card:hover{box-shadow:0 8px 24px rgba(0,0,0,.1);transform:translateY(-2px)}
-.blog-card-img{height:120px;background:linear-gradient(135deg,#0a1628,#1a365d);display:flex;align-items:center;justify-content:center;font-size:2.5rem}
-.blog-card-body{padding:18px}
-.blog-card .tag{display:inline-block;font-size:.6rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;padding:2px 8px;border-radius:4px;background:var(--accent-glow)}
-.blog-card h3{font-size:.95rem;font-weight:800;color:var(--text);margin-bottom:6px;line-height:1.3}
-.blog-card p{font-size:.75rem;color:var(--text2);line-height:1.5;margin-bottom:12px}
-.blog-card a{display:inline-flex;align-items:center;gap:4px;padding:7px 16px;border-radius:6px;background:var(--accent-glow);color:var(--accent);font-size:.75rem;font-weight:700;text-decoration:none;transition:all .12s}
-.blog-card a:hover{background:var(--accent);color:#fff}
+h1{font-size:1.6rem;font-weight:900;letter-spacing:-.03em;margin:0 0 4px}
+.desc{font-size:.85rem;color:var(--text2);margin-bottom:28px}
 
-.featured-blog{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border)}
-.featured-blog .blog-card-img{height:100%;min-height:200px;font-size:4rem}
-.featured-blog .blog-card-body{padding:28px;display:flex;flex-direction:column;justify-content:center}
-.featured-blog h3{font-size:1.3rem;margin-bottom:8px}
-.featured-blog p{font-size:.85rem}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--surface);transition:box-shadow .12s}
+.card:hover{box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.card-top{height:6px}
+.card-body{padding:16px}
+.card-cat{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
+.card h3{font-size:.85rem;font-weight:800;color:var(--text);margin:0 0 6px;line-height:1.3}
+.card p{font-size:.72rem;color:var(--text2);line-height:1.5;margin:0 0 10px}
+.card a{font-size:.7rem;font-weight:700;color:var(--accent)}
 
-.site-footer{border-top:1px solid var(--border);background:var(--bg-alt)}
-.footer-inner{max-width:1400px;margin:0 auto;padding:24px;text-align:center}
-.footer-inner p{font-size:.65rem;color:var(--muted);margin-bottom:4px}
-.footer-inner a{color:var(--accent);text-decoration:none}
+.rss{margin-top:28px;font-size:.72rem;color:var(--muted)}
+.rss a{color:var(--muted)}
+.rss a:hover{color:var(--accent)}
 
-@media(max-width:768px){.blog-grid{grid-template-columns:1fr}.featured-blog{grid-template-columns:1fr}.blog-hero{padding:36px 18px}.blog-hero h1{font-size:1.8rem}}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--border);text-align:center;font-size:.65rem;color:var(--muted)}
+footer a{color:var(--accent)}
+
+@media(max-width:768px){.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="logo">
-      <img src="/assets/site-logo.png" alt="">
-      <span class="logo-text">Awesome<em>Jobs</em></span>
-    </a>
+<a class="back" href="/">← Jobs</a>
+<h1>Blog</h1>
+<p class="desc">Remote work guides, salary insights, and career resources.</p>
+
+<div class="grid">
+  <div class="card">
+    <div class="card-top" style="background:#059669"></div>
+    <div class="card-body">
+      <div class="card-cat" style="color:#059669">Salary Guide</div>
+      <h3>Highest Paying Remote Jobs Right Now</h3>
+      <p>We analyzed 11,000+ listings to find which remote roles pay the most.</p>
+      <a href="/blog-highest-paying-remote-jobs.html">Read →</a>
+    </div>
   </div>
-</header>
 
-<section class="blog-hero">
-  <h1>📝 Remote Work Blog</h1>
-  <p>Guides, salary reports, and career tips for remote job seekers.</p>
-</section>
-
-<main class="blog-body">
-  <div class="blog-grid">
-
-    <!-- Featured post -->
-    <div class="featured-blog">
-      <div class="blog-card-img" style="background:linear-gradient(135deg,#065f46,#059669)">Salary Guide</div>
-      <div class="blog-card-body">
-        <span class="tag">Salary Guide</span>
-        <h3>Highest Paying Remote Jobs Right Now</h3>
-        <p>Discover which remote roles offer the best compensation in 2026 — from six-figure engineering positions to executive leadership. We analyzed 11,000+ job listings to find where the money is.</p>
-        <a href="/blog-highest-paying-remote-jobs.html">Read Article →</a>
-      </div>
+  <div class="card">
+    <div class="card-top" style="background:#2563eb"></div>
+    <div class="card-body">
+      <div class="card-cat" style="color:#2563eb">Development</div>
+      <h3>Top 10 Remote Developer Jobs in 2026</h3>
+      <p>From frontend to AI engineering — the most in-demand dev roles.</p>
+      <a href="/blog-remote-developer-jobs.html">Read →</a>
     </div>
-
-    <div class="blog-card">
-      <div class="blog-card-img" style="background:linear-gradient(135deg,#1e40af,#2563eb)">Development</div>
-      <div class="blog-card-body">
-        <span class="tag">Developer Guide</span>
-        <h3>Top 10 Remote Developer Jobs in 2026</h3>
-        <p>From frontend to AI engineering — the most in-demand remote developer roles and what they pay right now.</p>
-        <a href="/blog-remote-developer-jobs.html">Read Article →</a>
-      </div>
-    </div>
-
-    <div class="blog-card">
-      <div class="blog-card-img" style="background:linear-gradient(135deg,#7c2d12,#dc2626)">Career</div>
-      <div class="blog-card-body">
-        <span class="tag">Career Guide</span>
-        <h3>How to Land a Remote Job from Anywhere</h3>
-        <p>Practical strategies for finding and securing a remote position — from resume optimization to acing video interviews.</p>
-        <a href="/blog-land-remote-job.html">Read Article →</a>
-      </div>
-    </div>
-
-    <div class="blog-card">
-      <div class="blog-card-img" style="background:linear-gradient(135deg,#4a1d6e,#8b5cf6)">Tools</div>
-      <div class="blog-card-body">
-        <span class="tag">Productivity Guide</span>
-        <h3>Remote Work Guide: Tools & Tips for Success</h3>
-        <p>The essential toolkit for thriving as a remote worker — communication, project management, and work-life balance.</p>
-        <a href="/blog-remote-work-tools.html">Read Article →</a>
-      </div>
-    </div>
-
-    <div class="blog-card">
-      <div class="blog-card-img" style="background:linear-gradient(135deg,#1a365d,#2563eb)">Companies</div>
-      <div class="blog-card-body">
-        <span class="tag">Company Guide</span>
-        <h3>Best Companies Hiring Remotely in 2026</h3>
-        <p>The companies leading the remote work revolution — from fully distributed startups to enterprise teams.</p>
-        <a href="/blog-best-remote-companies.html">Read Article →</a>
-      </div>
-    </div>
-
-    <div class="blog-card">
-      <div class="blog-card-img" style="background:linear-gradient(135deg,#14532d,#16a34a)">Jobs</div>
-      <div class="blog-card-body">
-        <span class="tag">Browse All Jobs</span>
-        <h3>11,000+ Remote Jobs Available Now</h3>
-        <p>Browse our complete job board with listings from 78 companies, updated every 15 minutes.</p>
-        <a href="/">Browse Jobs →</a>
-      </div>
-    </div>
-
   </div>
-</main>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <p>© 2026 <a href="/">AwesomeJobs.online</a> — Remote job board.</p>
-    <p><a href="/">Jobs</a> · <a href="/about.html">About</a> · <a href="/blog">Blog</a> · <a href="/sitemap.html">Sitemap</a></p>
+  <div class="card">
+    <div class="card-top" style="background:#dc2626"></div>
+    <div class="card-body">
+      <div class="card-cat" style="color:#dc2626">Career</div>
+      <h3>How to Land a Remote Job from Anywhere</h3>
+      <p>Resume tips, interview strategies, and tactics for securing a role.</p>
+      <a href="/blog-land-remote-job.html">Read →</a>
+    </div>
   </div>
+
+  <div class="card">
+    <div class="card-top" style="background:#8b5cf6"></div>
+    <div class="card-body">
+      <div class="card-cat" style="color:#8b5cf6">Productivity</div>
+      <h3>Remote Work Tools and Tips for Success</h3>
+      <p>Essential tools for communication, project management, and balance.</p>
+      <a href="/blog-remote-work-tools.html">Read →</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top" style="background:#0ea5e9"></div>
+    <div class="card-body">
+      <div class="card-cat" style="color:#0ea5e9">Companies</div>
+      <h3>Best Companies Hiring Remotely in 2026</h3>
+      <p>Companies leading the remote work revolution — startups to enterprise.</p>
+      <a href="/blog-best-remote-companies.html">Read →</a>
+    </div>
+  </div>
+</div>
+
+<p class="rss"><a href="/rss.xml">RSS Feed</a></p>
+
+<footer>
+  <a href="/">AwesomeJobs.online</a> — 11,000+ remote jobs from 50+ sources
 </footer>
 </body>
 </html>
