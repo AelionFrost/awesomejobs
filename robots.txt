@@ -7,3 +7,4 @@ Sitemap: https://awesomejobs.online/sitemap.xml
 
 # Crawl delay for polite crawling
 Crawl-delay: 10
+Sitemap: https://awesomejobs.online/rss.xml
