@@ -74,7 +74,7 @@ strong{color:var(--text)}
   </ul>
 
   <div class="note">
-    <strong>Data insight:</strong> The average remote salary on AwesomeJobs is $127,000. Browse 11,000+ listings with transparent salary information.
+    <strong>Data insight:</strong> The average remote salary on AwesomeJobs is $127,000. Browse <span class="live-job-count">11,000</span>+ listings with transparent salary information.
   </div>
 
   <h2>Why Remote Salaries Are Rising</h2>
@@ -102,5 +102,6 @@ fetch('/data/jobs.json?t='+Date.now(),{cache:'no-store'})
     <p><a href="/">Jobs</a> · <a href="/blog">Blog</a> · <a href="/about.html">About</a></p>
   </div>
 </footer>
+<script src="/assets/live-count.js"></script>
 </body>
 </html>
